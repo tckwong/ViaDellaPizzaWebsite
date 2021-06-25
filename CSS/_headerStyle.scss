@@ -1,0 +1,103 @@
+.navigation_grid_container {
+    position: absolute;
+    top: 2vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .2fr .5fr;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+
+    .navDropdown {
+        position: relative;
+        display: inline-block;
+        justify-self: start;
+        padding-left: 10px;
+        
+        #dropdownIcon {
+            filter: invert(100);
+            margin: 0;
+            box-shadow: initial;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            min-width: 85vw;
+            min-height: 50vh;
+            box-shadow: 0px 8px 16px 0px rgba(211, 175, 175, 0.2);
+            padding: 15px 16px;
+            background-color: rgba(0, 0, 0, .9);
+            border-radius: 5px;
+
+            a {
+                color: white;
+            }
+
+            #logoInNaV {
+                height: 100px;
+                box-shadow: unset;
+            }
+
+            li {
+                list-style-type: none;
+                padding: 30px;
+                border-bottom:1px solid rgba(0, 0, 0, 0.185);
+                text-align: center;
+            }
+    
+            a {
+                text-align: center;
+            }
+        }
+       
+        #logoInNaV:hover {
+            background-color: none;
+        }
+
+        @keyframes navBarReveal {
+            0% {opacity: 0%; left: -4vw;}
+            100% {opacity: 100%; left: 10px;}
+        }
+
+        &:hover .dropdown-content {
+            display: block;
+            position: absolute;
+            animation-name: navBarReveal;
+            animation-duration: .4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            z-index: 2;
+            opacity: 95%;
+        }
+    }
+
+    #pageTitle > h1 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    #pageTitle > h1:after {
+        content: "";
+        display: block;
+        margin: 0 auto;
+        width: 45%;
+        padding-top: 10px;
+        border-bottom: 1px solid white;
+    }
+
+    #pageTitle > p {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    #logo {
+        height: 120px;
+        margin: 0;
+        box-shadow: initial;
+        justify-self: center;
+    }
+
+ 
+}

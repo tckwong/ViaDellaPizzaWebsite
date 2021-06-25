@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 14px;
+    font-family: "Helvetica Neue", Helvetica, Arial;
+    overflow-y: visible;
+    background-color: #eeeae3;
+}
+
+h1 {
+    font-family: "libre baskerville", serif;
+    font-style: bold;
+    padding: 1vh 2vh;
+    color:rgb(170, 153, 121);
+    text-align: left;
+}
+
+h2 {
+    color: rgb(231, 14, 14);
+    text-align: left;
+    font: bold 20px "Lucida Handwriting", "Bombshell Pro", "Brush Script MT";
+    padding: 1vh 2vh;
+}
+
+a {
+    text-decoration: none;
+    color: #1d1c1c;
+}
+
+p {
+    padding: 2vh 2vh;
+    text-align: left;
+}
+
+img {
+    margin: 2vh 2vw;
+    box-shadow: 3px 4px 6px #1d1c1c;
+}
+
+button {
+    background-color: #eeeae3;
+    border: 5px, black;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    padding: 1vh 6vw;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin-right: auto;
+    margin-left: auto;
+
+ 
+}
+
