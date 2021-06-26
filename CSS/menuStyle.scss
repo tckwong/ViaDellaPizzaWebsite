@@ -1,5 +1,6 @@
 @import '_generalStyle';
 @import '_variablesMixins.scss';
+@import '_subPageStyle.scss';
 
 .headerBGFixed {
     background-image: linear-gradient(to top,rgba(0, 0, 0, .6),rgba(0, 0, 0, .9)), url('https://i.pinimg.com/originals/fc/40/ee/fc40ee0c2f22b29d21c33e64ac11dbf3.jpg');

@@ -1,0 +1,26 @@
+.headerBGFixed {
+    position: relative;
+    min-height: $parallaxMinHeight*0.5;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+//Page load title animation
+@keyframes title_appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+#pageTitle > h1 {
+   @include pageLoadAppearH1 ($fontSze);
+}
+
+@keyframes slide_in_top {
+    0% {opacity: 0%; top:-20px;}
+    100% {opacity: 100%; top:-10px;}
+}
+
+#pageTitle > p {
+    @include pageLoadAppearP ($fontSze*.5);
+}
