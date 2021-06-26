@@ -1,0 +1,47 @@
+@import '_generalStyle';
+@import '_variablesMixins.scss';
+@import '_subPageStyle.scss';
+
+.headerBGFixed {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .6)), url('https://i.pinimg.com/originals/13/d7/1f/13d71f79fb91e46fc02045c3d5678518.jpg');
+}
+
+@import '_headerStyle.scss';
+
+.navigation_grid_container #pageTitle > h1:after {
+    display: none;
+    border-bottom: none;
+}
+
+.OneColGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    grid-template-rows: 1fr;
+    justify-items: center;
+    align-items: center;
+    row-gap: 5%;
+    height: 25vh;
+
+    img {
+        width: 100%;
+        height: 70%;
+        border-radius: 5px;
+        object-fit: cover;
+    }
+
+    div {
+        background-color: rgba($color: #CF0101, $alpha: .7);
+        margin: 0 20px;
+        border-radius: 5px;
+        height: 680px;
+    }
+}
+
+.sectionH2Style, .sectionH1Style  {
+    text-align: center;
+}
+
+.sectionH1Style {
+    padding-bottom: 8vh;
+}

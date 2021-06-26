@@ -6,29 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - Okotoks Pizza</title>
     
-    <link rel="stylesheet" href="CSS/AbtUsStyle.css">
+    <link rel="stylesheet" href="CSS/abtUsStyle.css">
 </head>
 <body>
     <header>
         <div class="headerBGFixed"><fade/></div>
-        <nav class="navigation_grid_container">
-            <div class="navDropdown">
-                <a href="#page"><img id="dropdownIcon" src="https://img.icons8.com/material-outlined/48/000000/menu--v2.png"/></a>
-                <div class="dropdown-content">
-                    <li><a href="#home"><img id="logoInNaV" src="Media/LogoNew.png" alt="logo"/></a></li>
-                    <li><a class="navLinks" href="parallax.html">HOME</a></li>
-                    <li><a class="navLinks" href="#home">MENU</a></li>
-                    <li><a class="navLinks" href="aboutUs.html">ABOUT</a></li>
+            <nav class="navWrapper">
+                <div class="navDropdown">
+                    <input type="checkbox" id="menuToggle"/>
+                    <label for="menuToggle"><img id="dropdownIcon" src="https://img.icons8.com/material-outlined/48/000000/menu--v2.png"/></label>
+                        
+                    <div class="dropdown-content">
+                        <li><a href="#home"><img id="logoInNaV" src="Media/LogoNew.png" alt="logo"/></a></li>
+                        <li><a class="navLinks" href="#home">HOME</a></li>
+                        <li><a class="navLinks" href="menu.html">MENU</a></li>
+                        <li><a class="navLinks" href="aboutUs.html">ABOUT</a></li>
+                        <div id="navContact">
+                            <li><a href="tel:4037777777">(403)777-7777</a></li>
+                            <li>4 Okotoks Street NW</li>
+                        </div>
+                    </div>
+                </div>
+    
+                <div id="desktopOnlyNav">
+                    <li><a href="#home">HOME</a></li>
+                    <li><a href="menu.html">MENU</a></li>
+                    <li><a href="aboutUs.html">ABOUT</a></li>
                     <li><a class="navLinks" href="aboutUs.html">RESERVATION</a></li>
                 </div>
-            </div>
+                
+                <div>
+                    <a href="tel:4037777777"><img id="mobilePhoneIcon" src="Media/phoneIcon.png" alt="Clickable phone icon for mobile version"/></a>
+                </div> 
+            </nav>
+        
+            <div class="navigation_grid_container">
+                <img id="logo" src="Media/LogoNew.png" alt="Logo">
+                <div id="pageTitle">
+                    <h1>ABOUT US</h1>
 
-            <img id="logo" src="Media/LogoNew.png" alt="Logo">
-            <div id="pageTitle">
-                <h1>ABOUT US</h1>
+                </div>
             </div>
-        </nav>
-    </header>
+        </header>
           
     <section>
         <h2 class="sectionH2Style">Discover</h2>
