@@ -175,3 +175,120 @@ fade {
 }
 
 @import '_footerStyle.scss';
+
+@media only screen and (min-width:700px) {
+    #mobilePhoneIcon {
+        display: none;
+    }
+
+    #navContact a {
+        pointer-events: none; // Makes the anchor tag unclickable
+        cursor: default; //Default cursor type
+    }
+
+   .mobileUnseen {
+        display: initial;
+    }
+
+   .ourStoryGridCntnr {
+        grid-template-columns: 1fr .8fr 1fr;
+        margin: 0 2vw;
+        align-items: center;
+
+        #imgMobileOnly {
+            display: none;
+        }
+        
+        #imgRight {
+            display: initial;
+            height: 26vh;
+            width: 19vh;
+            object-fit: cover;
+            box-shadow: none;
+        }
+   }
+  
+    .sectionHeader {
+        h2 {
+            position: unset;
+            opacity: 20%;
+            font-size: 2.2rem;
+            padding-top: 2vh;
+            text-align: center;
+            text-shadow: 1px 1px 2px black;
+            z-index: -1;
+            margin-bottom:-70px;
+        }
+    
+        h1 {
+            position: unset;
+            font-size: 2.5rem;
+            font-style: normal;
+            padding-top: 3vh;
+            text-align: center;
+        }
+    }
+
+    .iframeContainer {
+        width: 70%;
+        padding-top: 45%; //Adjust to maintain preferred aspect ratio
+    }
+
+    .itemSlide img {
+        width: 45vw;
+        height: 25vh;
+    }
+
+    .twoColGridContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        justify-items: center;
+        padding: 5vh 16vw;
+        column-gap: 5px;
+        
+        .sectionHeaderV2 {
+            background-color: ivory;
+        }
+    }
+
+    #interactiveMap {
+        max-width: 100%;
+        height: 30vh;
+    }
+
+    .footerGridContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-size: cover;
+        justify-items: left;
+    
+        div {
+            color: white;
+            padding:0;
+        }
+    
+        h2 {
+            padding: 2vh 0;
+        }
+    
+        li {
+            list-style: none;
+            padding: 5px 0;
+        }
+
+        div:nth-child(4) {
+            grid-column: 1 / span 3;
+            padding:0;
+            padding-top: 40px;
+            margin: 0;
+            justify-self: center;
+        }
+        div:nth-child(4):before {
+            content: "";
+            display: block;
+            width: 100%;
+            border-top: 2px solid white;
+        }
+    }
+}
