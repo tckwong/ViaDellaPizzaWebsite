@@ -1,24 +1,29 @@
-@import '_generalStyle';
+@import '_generalStyle.scss';
+@import '_variablesMixins.scss';
 
 .headerBGFixed {
     position: relative;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, 8)), url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
-    min-height: 600px;
+    min-height: $parallaxMinHeight;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+fade {
+    @include edgeFade($fadeHeight);
+}
+
 @import '_headerStyle.scss';
 
 .ourStoryGridCntnr {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: 1fr;
     margin-top: 20px;
 
     img {
-        height: 30vh;
+        height: 27vh;
         width: 95%;
         object-fit: cover;
     }
@@ -30,9 +35,10 @@
     button {
         margin-right: auto;
         margin-left: auto;
+        width: 300px;
     }
 }
-//Removes anything for mobile in this class
+//Removes any images for mobile in this class
 .mobileUnseen {
     display: none;
 }
@@ -53,7 +59,7 @@
     }
 
     h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-style: normal;
         padding-top: 3vh;
     }
@@ -62,8 +68,8 @@
 .videoBanner {
     position: relative;
     background-image: url('https://i.pinimg.com/originals/21/2f/91/212f91a5e064ea3087cce922f4acd32a.jpg');
-    content: "";
-    height: 40vh;
+    padding-top: 66%;
+    //height: 40vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -75,7 +81,6 @@
     width: 90%;
     padding-top: 66%; //Adjust to maintain preferred aspect ratio
     margin: 0 auto;
-    box-shadow: 2px 2px 10px red;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -89,15 +94,34 @@
     right: 0;
     width: 100%;
     height: 100%;
+    border-radius: 20px;
 }
 
 .sectionHeaderV2 > h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: bold;
     padding-top: 3vh;
     text-align: center;
 }
 
+// Page load animations
+@keyframes title_appear {
+    0% {opacity: 0%;}
+    100% {opacity: 100%;}
+}
+
+#pageTitle > h1 {
+   @include pageLoadAppearH1 ($fontSze*2);
+}
+
+@keyframes slide_in_top {
+    0% {opacity: 0%; top:-20px;}
+    100% {opacity: 100%; top:-10px;}
+}
+
+#pageTitle > p {
+    @include pageLoadAppearP ($fontSze);
+}
 
 //Carousal animation styling
 .wrapper {
@@ -105,9 +129,27 @@
     align-items: center;
     justify-content: center;
     margin: 20px 0;
-    background-color: rgb(113, 113, 226);
-   
-}
+    background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
+    }
+
+.sideFade::before, .sideFade::after {
+    height: 100px;
+    width: 200px;
+    content: "";
+    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+    z-index: 2;
+  }
+
+  .sideFade::before {
+    left: 0;
+    top: 0;
+  }
+  .sideFade::after {
+    right:0;
+    top:0;
+    transform: rotateZ(180deg);
+  }
+
 .container {
     display: flex;
     position: relative;
@@ -121,64 +163,15 @@
   }
 
 .itemSlide img {
-    width: 45vw;
-    height: 15vh;
+    max-width: 180px;
+    min-height: 17vh;
     object-fit: cover;
-    box-shadow: none;
 }
-//Add fade to left and right
-.container::before, .container::after {
-    width: 15vw;
-    height: 45vh;
-    position: absolute;
-    content: "";
-    background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
-    z-index: 2;
-  }
-  .container::before {
-    left: 0;
-    top: 0;
-  }
-  .container::after {
-    right:0;
-    top:0;
-    transform: rotateZ(180deg);
-  }
 
-
-//FOOTER CODE
-.footerGridContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, 8)), url('https://i.pinimg.com/originals/59/ed/b4/59edb4fc80e730ffb402c1d4df58a1bb.jpg');
-    background-size: cover;
-    justify-items: left;
-
-    div {
-        color: white;
-        margin-left: 10vw;
-    }
-
-    h2 {
-        padding: 2vh 0;
-    }
-
-    li {
-        list-style: none;
-        padding: 5px 0;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    .socialMediaIcons {
-        height:18px;
-        justify-self: left;
-        padding: 2px;
-        box-shadow: none;
-        margin: 10px;
-        filter: invert(100%);
-    }
+#interactiveMap {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
 }
+
+@import '_footerStyle.scss';

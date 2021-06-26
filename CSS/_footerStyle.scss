@@ -1,0 +1,35 @@
+.footerGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, 8)), url('https://i.pinimg.com/originals/59/ed/b4/59edb4fc80e730ffb402c1d4df58a1bb.jpg');
+    background-size: cover;
+    justify-items: start;
+
+    div {
+        color: white;
+        margin-left: 10vw;
+    }
+
+    h2 {
+        padding: 2vh 0;
+    }
+
+    li {
+        list-style: none;
+        padding: 5px 0;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .socialMediaIcons {
+        height:18px;
+        justify-self: left;
+        padding: 2px;
+        box-shadow: none;
+        margin: 10px;
+        filter: invert(100%);
+    }
+}

@@ -14,27 +14,50 @@
 </head>
 <body>
     <header>
-        <div class="headerBGFixed"><fade/></div>
-        <nav class="navigation_grid_container">
+    <div class="headerBGFixed"><fade/></div>
+        <nav class="navWrapper">
             <div class="navDropdown">
-                <a href="#page-footer"><img id="dropdownIcon" src="https://img.icons8.com/material-outlined/48/000000/menu--v2.png"/></a>
+                <input type="checkbox" id="menuToggle"/>
+                <label for="menuToggle"><img id="dropdownIcon" src="https://img.icons8.com/material-outlined/48/000000/menu--v2.png"/></label>
+                    
                 <div class="dropdown-content">
                     <li><a href="#home"><img id="logoInNaV" src="Media/LogoNew.png" alt="logo"/></a></li>
                     <li><a class="navLinks" href="#home">HOME</a></li>
                     <li><a class="navLinks" href="menu.html">MENU</a></li>
                     <li><a class="navLinks" href="aboutUs.html">ABOUT</a></li>
-                    <li><a class="navLinks" href="aboutUs.html">RESERVATION</a></li>
+                    <div id="navContact">
+                        <li><a href="tel:4037777777">(403)777-7777</a></li>
+                        <li>4 Okotoks Street NW</li>
+                    </div>
                 </div>
             </div>
+
+            <div id="desktopOnlyNav">
+                <li><a href="#home">HOME</a></li>
+                <li><a href="menu.html">MENU</a></li>
+                <li><a href="aboutUs.html">ABOUT</a></li>
+                <li><a class="navLinks" href="aboutUs.html">RESERVATION</a></li>
+            </div>
+            
+            <div>
+                <a href="tel:4037777777"><img id="mobilePhoneIcon" src="Media/phoneIcon.png" alt="Clickable phone icon for mobile version"/></a>
+            </div> 
+        </nav>
+    
+        <div class="navigation_grid_container">
             <img id="logo" src="Media/LogoNew.png" alt="Logo">
             <div id="pageTitle">
                 <h1>VIA DELLA PIZZA</h1>
+                <p>Providing delicious pizza since 1990</p>
             </div>
-        </nav>
+        </div>
     </header>
     <main>
         <section>
             <div class="ourStoryGridCntnr">
+                <div>
+                    <img class="mobileUnseen" src="Media/pizzaChef.jpg" alt="restaurant photo">
+                </div>
                 <div id="gridHeading">
                     <div class="sectionHeader">
                         <h2>Discover</h2>
@@ -43,49 +66,94 @@
                     <p>From hot Hawaiians and classic Canadians to crispy wings and decadent fudge brownies, everything at Okotoks Pizza is baked with love.</p>
                     <button><a href="aboutUs.html">See More</a></button>
                 </div>
-            <div>
-                    <img src="Media/rest3.jpg" alt="restaurant photo">
-                </div>
                 <div>
-                    <img src="Media/PhotoPizza.png" alt="photo of a pizza">
+                    <img id="imgRight" src="Media/rest3.jpg" alt="restaurant photo">
+                    <img id="imgRight" src="Media/PhotoPizza.png" alt="photo of a pizza">
                 </div>
-            </div>
+           </div>
         </section>
         
+        <div class="videoBanner">
+            <div class="iframeContainer">
+                <iframe
+                    class="embeddedIframe"
+                    src="https://www.youtube.com/embed/T0OXeA9M1As" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
             <div class="sectionHeader">
                 <h2>Discover</h2>
                 <h1>OUR GALLERY</h1>
             </div>
+
+        <section class="wrapper">
+            <div class="sideFade">
+                <div class="container">
+                    <div class="itemSlide">
+                        <img src="Media/pizza2.png">
+                        <img src="Media/pasta.jpg">
+                        <img src="Media/friendspizza.jpg">
+                        <img src="Media/restaurant.jpg">
+                        <img src="Media/pizza3.jpg">
+                        <img src="Media/pizza4.jpg">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <button><a href="menu.html">View Menu</a></button>
         
-        <footer class="footerGridContainer">
-    
-            <div>
-                <h2>Contact Us</h2>
-                <li><a target="_blank" href="mailto:okotokspizza@gmail.com"> okotokspizza@gmail.com</a></li>
-                <li><a target="_blank" href="tel:4037777777">(403)777-7777</a></li>
-                <li><a target="_blank" href="https://www.google.com/maps/search/20+okotoks+street+south/@50.728525,-114.0363595,12z/data=!3m1!4b1">20 Okotoks Street South</a></li>
+        <section>
+            <div class="bannerParallax"></div>
+        </section>
+        
+        <section>
+            <div class="sectionHeaderV2">
+                <h1>FIND US</h1>
             </div>
             <div>
-                <h2>Business Hours</h2>
-                <li>Monday: 4:00PM - midnight</li>
-                <li>Tuesday: 4:00PM - midnight</li>
-                <li>Wednesday: 4:00PM - midnight</li>
-                <li>Thursday: 4:00PM - midnight</li>
-                <li>Friday: 4:00PM - midnight</li>
-                <li>Saturday: 4:00PM - 2:00AM</li>
-                <li>Sunday: 4:00PM - 2:00AM</li>
+                <iframe
+                id="interactiveMap"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2123.6601940300707!2d-113.97477167591865!3d50.72973750052277!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x537199ca557e1b99%3A0x232f0fb6ccd80c19!2s4%20Okotoks%20Dr%2C%20Okotoks%2C%20AB%20T1S%201G1!5e0!3m2!1sen!2sca!4v1624317420553!5m2!1sen!2sca" 
+                allowfullscreen="" 
+                loading="lazy">
+                </iframe>
             </div>
-    
-            <div>
-                <h2>Follow Us</h2>
-                <a target="_blank" href="https://www.facebook.com"> <img class="socialMediaIcons" src="Media/svg/facebookIcon.svg" alt="Facebook Icon"/></a>
-                <a target="_blank" href="https://www.twitter.com"> <img class="socialMediaIcons" src="Media/svg/twitterIcon.svg" alt="Twitter Icon"/></a>
-                <a target="_blank" href="https://www.instagram.com"> <img class="socialMediaIcons" src="Media/svg/instagramIcon.svg" alt="Instagram Icon"/></a>
-            </div>
-            <div>
-                <p>COPYRIGHT © VIA DELLA PIZZA 2021. ALL RIGHT RESERVED</p>
-            </div>
-        </footer>
-</main>
+        </section>
+    </main> 
+
+    <footer class="footerGridContainer">
+        
+        <div>
+            <h2>Contact Us</h2>
+            <li><a target="_blank" href="mailto:okotokspizza@gmail.com"> okotokspizza@gmail.com</a></li>
+            <li><a target="_blank" href="tel:4037777777">(403)777-7777</a></li>
+            <li><a target="_blank" href="https://www.google.com/maps/search/20+okotoks+street+south/@50.728525,-114.0363595,12z/data=!3m1!4b1">20 Okotoks Street South</a></li>
+        </div>
+        <div>
+            <h2>Business Hours</h2>
+            <li>Monday: 4:00PM - midnight</li>
+            <li>Tuesday: 4:00PM - midnight</li>
+            <li>Wednesday: 4:00PM - midnight</li>
+            <li>Thursday: 4:00PM - midnight</li>
+            <li>Friday: 4:00PM - midnight</li>
+            <li>Saturday: 4:00PM - 2:00AM</li>
+            <li>Sunday: 4:00PM - 2:00AM</li>
+        </div>
+
+        <div>
+            <h2>Follow Us</h2>
+            <a target="_blank" href="https://www.facebook.com"> <img class="socialMediaIcons" src="Media/svg/facebookIcon.svg" alt="Facebook Icon"/></a>
+            <a target="_blank" href="https://www.twitter.com"> <img class="socialMediaIcons" src="Media/svg/twitterIcon.svg" alt="Twitter Icon"/></a>
+            <a target="_blank" href="https://www.instagram.com"> <img class="socialMediaIcons" src="Media/svg/instagramIcon.svg" alt="Instagram Icon"/></a>
+        </div>
+        <div>
+            <p>COPYRIGHT © VIA DELLA PIZZA 2021. ALL RIGHT RESERVED</p>
+        </div>
+    </footer>
+
+</body>
 </html>
-    

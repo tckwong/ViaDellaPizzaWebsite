@@ -1,13 +1,11 @@
-.navigation_grid_container {
+.navWrapper {
     position: absolute;
     top: 2vh;
     display: grid;
+    grid-template-columns: .1fr 1fr;
     width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: .1fr .2fr .5fr;
-    height: 40vh;
-    align-items: center;
-    justify-content: center;
+    align-content: center;
+    justify-items: end;
 
     .navDropdown {
         position: relative;
@@ -16,16 +14,35 @@
         padding-left: 10px;
         
         #dropdownIcon {
+            display: inline-block;
             filter: invert(100);
             margin: 0;
             box-shadow: initial;
+            align-self: end;
+        }
+        #menuToggle:checked ~ #menu {
+            display: block;
+            position: absolute;
+            animation-name: navBarReveal;
+            animation-duration: .4s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+            z-index: 2;
+            opacity: 95%;
+        }
+        #menuToggle {
+            display: none; //Hides the toggle checkbox from view
+        }
+
+        label {
+            user-select: none;
         }
 
         .dropdown-content {
             display: none;
             position: absolute;
             min-width: 85vw;
-            min-height: 50vh;
+            min-height: 60vh; // Maintains structure in landscape view
             box-shadow: 0px 8px 16px 0px rgba(211, 175, 175, 0.2);
             padding: 15px 16px;
             background-color: rgba(0, 0, 0, .9);
@@ -43,12 +60,27 @@
             li {
                 list-style-type: none;
                 padding: 30px;
-                border-bottom:1px solid rgba(0, 0, 0, 0.185);
+                border-bottom: 1px solid rgba(230, 228, 228, 0.8);
                 text-align: center;
             }
-    
+            
             a {
                 text-align: center;
+            }
+            
+            #navContact li {
+                border-bottom: none;
+                color: rgb(170, 153, 121);
+                font-weight: bold;
+                font-size: 1.1rem;
+                padding: 0;
+
+                a {
+                    color: rgb(170, 153, 121);
+                }
+            }
+            #navContact {
+                padding-top: 30px;
             }
         }
        
@@ -73,31 +105,64 @@
         }
     }
 
-    #pageTitle > h1 {
-        font-size: 3rem;
-        text-align: center;
-    }
-
-    #pageTitle > h1:after {
-        content: "";
-        display: block;
-        margin: 0 auto;
-        width: 45%;
-        padding-top: 10px;
-        border-bottom: 1px solid white;
-    }
-
-    #pageTitle > p {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    #logo {
-        height: 120px;
-        margin: 0;
-        box-shadow: initial;
+    #desktopOnlyNav {
+        display: none;
         justify-self: center;
+        align-self: center;
+        
+        li{
+            display: inline;
+            a {
+                color: white;
+            }
+        }
+    }
+    //Phone Icon Styling (Mobile Only)
+    #mobilePhoneIcon {
+        filter: invert(100);
+        height: 38px;
+        box-shadow: none;
+        justify-self: end;
+        margin-top: 10px;
+        margin-right: 18px;
+
+    }
+}
+.navigation_grid_container {
+    position: absolute;
+    top: 10vh;
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr .2fr .5fr;
+    height: 40vh;
+    align-items: center;
+    justify-content: center;
+    
+        #pageTitle > h1 {
+            font-size: 3rem;
+            text-align: center;
+        }
+
+        #pageTitle > h1:after {
+            content: "";
+            display: block;
+            margin: 0 auto;
+            width: 55%;
+            padding-top: 10px;
+            border-bottom: 1px solid white;
+        }
+
+        #pageTitle > p {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        #logo {
+            height: 120px;
+            margin: 0;
+            box-shadow: initial;
+            justify-self: center;
     }
 
- 
 }

@@ -1,0 +1,46 @@
+//global variables
+$parallaxMinHeight: 600px;
+$fancyFontHeading: "libre baskerville", serif;
+$fontSze: 1rem;
+$titlePositionY: 40vh;
+$titlePositionX: 50%;
+$fadeHeight: 60px;
+
+@mixin edgeFade($fadeHeight) {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: $fadeHeight;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, .9) 100%);
+}
+
+@mixin pageLoadAppearH1 ($fontSze) {
+    opacity: 0%;
+    font-size: $fontSze;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white;
+
+    animation-name: title_appear;
+    animation-duration: 2.5s;
+    animation-delay: .25s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; //Maintains the current state of website after animation completes
+}
+
+@mixin pageLoadAppearP ($fontSze) {
+    opacity: 0%;
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: $fontSze;
+    color: white;
+    font-style: italic;
+    text-align: center;
+
+    animation-name: slide_in_top;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
