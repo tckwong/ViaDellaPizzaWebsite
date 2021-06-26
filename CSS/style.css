@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -272,6 +273,10 @@ fade {
   width: 300px;
 }
 
+.ourStoryGridCntnr #imgRight {
+  display: none;
+}
+
 .mobileUnseen {
   display: none;
 }
@@ -426,13 +431,24 @@ fade {
 }
 
 .itemSlide img {
-  max-width: 180px;
+  width: 50vw;
   min-height: 17vh;
   object-fit: cover;
 }
 
+.bannerParallax {
+  position: relative;
+  background-image: url("https://i.pinimg.com/originals/34/fc/9a/34fc9af7947ff794b319065807bae02e.jpg");
+  min-height: 300px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 4vh;
+}
+
 #interactiveMap {
-  display: block;
+  display: inline-block;
   margin: 0 auto;
   width: 100%;
 }
