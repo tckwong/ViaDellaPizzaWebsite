@@ -392,15 +392,15 @@ fade {
 
 .wrapper {
   display: block;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   margin: 20px 0;
   background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
 }
 
 .sideFade::before, .sideFade::after {
-  height: 100px;
-  width: 200px;
+  position: absolute;
+  height: 100%;
+  width: 100px;
   content: "";
   background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
   z-index: 2;
@@ -417,17 +417,12 @@ fade {
   transform: rotateZ(180deg);
 }
 
-.container {
-  display: flex;
-  position: relative;
-  overflow: hidden;
-  overflow-x: scroll;
-}
-
 .itemSlide {
+  position: relative;
   display: flex;
   align-items: center;
-  animation: slideshow 8s linear infinite;
+  overflow: hidden;
+  overflow-x: scroll;
 }
 
 .itemSlide img {
