@@ -18,9 +18,10 @@ fade {
 @import '_headerStyle.scss';
 
 .ourStoryGridCntnr {
-    display: grid;
+    display: grid; //Foundation for tablet and desktop version
     grid-template-columns: 1fr;
     margin-top: 20px;
+    justify-items: center;
 
     img {
         height: 27vh;
@@ -28,22 +29,17 @@ fade {
         object-fit: cover;
     }
 
-    #gridHeading  {
-        padding: 0 5vw;
-    }
-
     button {
         margin-right: auto;
         margin-left: auto;
-        width: 300px;
+        width: 80%;
     }
     #imgRight {
         display: none;
     }
-    
 }
-//Removes any images for mobile in this class
-.mobileUnseen {
+
+.pizzaChef {
     display: none;
 }
 
@@ -52,20 +48,24 @@ fade {
     
     h2 {
         position: absolute;
-        top: -10px;
-        left: 20px;
-        opacity: 20%;
-        font-size: 2.2rem;
+        top: -25px;
+        left: 50%;
+        transform: translate(-50%);
+        opacity: 10%;
+        font-size: 3rem;
         padding-top: 2vh;
-        text-align: center;
         text-shadow: 1px 1px 2px black;
         z-index: -1;
     }
 
     h1 {
         font-size: 2rem;
-        font-style: normal;
         padding-top: 3vh;
+    }
+    img {
+        box-shadow: none;
+        height: 40px;
+        object-fit: contain;
     }
 }
 
@@ -138,7 +138,7 @@ fade {
 .sideFade::before, .sideFade::after {
     position: absolute;
     height: 100%;
-    width: 100px;
+    width: 60px;
     content: "";
     background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
     z-index: 2;
@@ -198,12 +198,14 @@ fade {
         cursor: default; //Default cursor type
     }
 
-   .mobileUnseen {
+   .pizzaChef {
         display: initial;
+        height: 80%;
+        margin: 0;
     }
 
    .ourStoryGridCntnr {
-        grid-template-columns: 1fr .8fr 1fr;
+        grid-template-columns: 1fr 1.5fr 1fr;
         margin: 0 2vw;
         align-items: center;
 
@@ -212,35 +214,12 @@ fade {
         }
         
         #imgRight {
-            display: initial;
-            height: 26vh;
-            width: 19vh;
-            object-fit: cover;
+            display: inherit;
+            object-fit: contain;
             box-shadow: none;
         }
    }
   
-    .sectionHeader {
-        h2 {
-            position: unset;
-            opacity: 20%;
-            font-size: 2.2rem;
-            padding-top: 2vh;
-            text-align: center;
-            text-shadow: 1px 1px 2px black;
-            z-index: -1;
-            margin-bottom:-70px;
-        }
-    
-        h1 {
-            position: unset;
-            font-size: 2.5rem;
-            font-style: normal;
-            padding-top: 3vh;
-            text-align: center;
-        }
-    }
-
     .iframeContainer {
         width: 70%;
         padding-top: 45%; //Adjust to maintain preferred aspect ratio
@@ -304,3 +283,4 @@ fade {
         }
     }
 }
+
