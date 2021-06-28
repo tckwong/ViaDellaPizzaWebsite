@@ -13,17 +13,23 @@ body {
 
 h1 {
     font-family: "libre baskerville", serif;
-    font-style: bold;
     padding: 1vh 2vh;
     color:rgb(170, 153, 121);
-    text-align: left;
+    text-align: center;
+    font-style: normal;
 }
 
 h2 {
     color: rgb(231, 14, 14);
-    text-align: left;
-    font: bold 20px "Lucida Handwriting", "Bombshell Pro", "Brush Script MT";
-    padding: 1vh 2vh;
+    text-align: center;
+    font: bold 20px "Lucida Grande";
+    text-transform: uppercase;
+}
+
+q {
+    text-align: center;
+    font: bold 20px "Lucida Grande";
+    color:rgb(170, 153, 121);
 }
 
 a {
@@ -31,8 +37,14 @@ a {
 }
 
 p {
-    padding: 2vh 2vh;
+    padding: 2vh 2vw;
     text-align: left;
+    text-justify: inter-word;
+}
+
+.sectionHeader > p {
+    padding: 2% 15%;
+    text-align: center;
 }
 
 img {

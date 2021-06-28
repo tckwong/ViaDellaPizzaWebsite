@@ -8,16 +8,16 @@
 
 @import '_headerStyle.scss';
 
-//Heading Section
 .sectionHeaderV2 > h1 {
     font-size: 2rem;
     font-style: bold;
     padding-top: 3vh;
     text-align: center;
+}
 
-    p {
-        text-align: center; 
-    }
+.sectionHeaderV2 > p {
+    text-align: center;
+    padding: 0 15vw;
 }
 
 .navigation_grid_container #pageTitle > h1:after {
@@ -35,7 +35,7 @@
         text-align: center;
         padding-right: 1vw;
         padding-left: 1vw;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         border-right: 1px solid grey;
     }
 }
@@ -48,14 +48,15 @@
     background-image: url('https://i.pinimg.com/originals/cc/2e/3c/cc2e3c6a25ef5fdb2946872ac5221354.jpg');
     scroll-behavior: smooth;
     align-items: flex-start;
-    
+
     .itemSlide {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 10vh;
     }
-       
-    div {
+
+    .itemSlide > div {
         width: 100vw;
     }
 
