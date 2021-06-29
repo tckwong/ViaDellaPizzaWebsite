@@ -55,6 +55,7 @@ img {
 }
 
 button {
+  display: block;
   background-color: #eeeae3;
   border: 5px, black;
   border-radius: 5px;
@@ -63,7 +64,6 @@ button {
   padding: 1vh 6vw;
   text-align: center;
   text-decoration: none;
-  display: block;
   font-size: 16px;
   margin-right: auto;
   margin-left: auto;
@@ -294,42 +294,74 @@ button {
   justify-self: center;
 }
 
+@media only screen and (min-width: 700px) {
+  #mobilePhoneIcon {
+    display: none;
+  }
+  #navContact a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .navWrapper {
+    display: inline;
+  }
+  .navWrapper .navDropdown {
+    display: none;
+  }
+  .navWrapper #desktopOnlyNav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin: 2vh 32vw;
+  }
+  .navWrapper #desktopOnlyNav li {
+    display: inline;
+  }
+  .navWrapper #desktopOnlyNav li a {
+    color: #aa9979;
+  }
+}
+
 .navigation_grid_container #pageTitle > h1:after {
   display: none;
   border-bottom: none;
 }
 
-.OneColGrid {
+.abtUsContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   justify-items: center;
   align-items: center;
   row-gap: 5%;
   height: 25vh;
 }
 
-.OneColGrid img {
+.abtUsContainer img {
   width: 100%;
   height: 70%;
   border-radius: 5px;
   object-fit: cover;
 }
 
-.OneColGrid div {
+.abtUsContainer div {
   background-color: rgba(207, 1, 1, 0.7);
   margin: 0 20px;
   border-radius: 5px;
   height: 680px;
 }
 
-.OneColGrid p {
+.abtUsContainer p {
   color: #eee4e3;
 }
 
 .quoteBox {
   position: relative;
   background-color: #f9f9f9;
-  border-left: 10px solid #ccc;
+  border-left: 10px solid #db3737;
   padding: 6vh;
   border-radius: 10px;
   margin: 20px;
@@ -360,5 +392,12 @@ button {
   font-size: 2rem;
   font-family: 'Gloria Hallelujah', "cursive";
   color: #aa9979;
+}
+
+@media only screen and (min-width: 700px) {
+  .abtUsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 /*# sourceMappingURL=abtUsStyle.css.map */

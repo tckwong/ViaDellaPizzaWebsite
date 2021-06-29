@@ -54,6 +54,7 @@ img {
 }
 
 button {
+  display: block;
   background-color: #eeeae3;
   border: 5px, black;
   border-radius: 5px;
@@ -62,7 +63,6 @@ button {
   padding: 1vh 6vw;
   text-align: center;
   text-decoration: none;
-  display: block;
   font-size: 16px;
   margin-right: auto;
   margin-left: auto;
@@ -292,6 +292,38 @@ button {
   justify-self: center;
 }
 
+@media only screen and (min-width: 700px) {
+  #mobilePhoneIcon {
+    display: none;
+  }
+  #navContact a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .navWrapper {
+    display: inline;
+  }
+  .navWrapper .navDropdown {
+    display: none;
+  }
+  .navWrapper #desktopOnlyNav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin: 2vh 32vw;
+  }
+  .navWrapper #desktopOnlyNav li {
+    display: inline;
+  }
+  .navWrapper #desktopOnlyNav li a {
+    color: #aa9979;
+  }
+}
+
 .sectionHeaderV2 > h1 {
   font-size: 2rem;
   font-style: bold;
@@ -366,6 +398,10 @@ button {
   border-bottom: 1px white solid;
 }
 
+.mobileHiddenPics {
+  display: none;
+}
+
 .footerGridContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -403,11 +439,53 @@ button {
 }
 
 @media only screen and (min-width: 700px) {
+  .footerGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-size: cover;
+    justify-items: left;
+  }
+  .footerGridContainer div {
+    color: white;
+    padding: 0;
+  }
+  .footerGridContainer h2 {
+    padding: 2vh 0;
+  }
+  .footerGridContainer li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  .footerGridContainer div:nth-child(4) {
+    grid-column: 1 / span 3;
+    padding: 0;
+    padding-top: 40px;
+    margin: 0;
+    justify-self: center;
+  }
+  .footerGridContainer div:nth-child(4):before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 2px solid white;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footerGridContainer {
+    padding-bottom: 5vh;
+  }
+}
+
+@media only screen and (min-width: 700px) {
   .menuWrapperMain {
     margin: 0 20vw;
   }
   .menuWrapperMain .itemSlide > div {
     width: 60vw;
+  }
+  .mobileHiddenPics {
+    height: 100px;
   }
   .menuNavContainer {
     margin: 0 20vw;

@@ -33,3 +33,47 @@
         filter: invert(100%);
     }
 }
+
+@media only screen and (min-width:700px) {
+    .footerGridContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-size: cover;
+        justify-items: left;
+
+        div {
+            color: white;
+            padding:0;
+        }
+
+        h2 {
+            padding: 2vh 0;
+        }
+
+        li {
+            list-style: none;
+            padding: 5px 0;
+        }
+
+        div:nth-child(4) {
+            grid-column: 1 / span 3;
+            padding:0;
+            padding-top: 40px;
+            margin: 0;
+            justify-self: center;
+        }
+
+        div:nth-child(4):before {
+            content: "";
+            display: block;
+            width: 100%;
+            border-top: 2px solid white;
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .footerGridContainer {
+        padding-bottom: 5vh;
+    }
+}

@@ -54,6 +54,7 @@ img {
 }
 
 button {
+  display: block;
   background-color: #eeeae3;
   border: 5px, black;
   border-radius: 5px;
@@ -62,7 +63,6 @@ button {
   padding: 1vh 6vw;
   text-align: center;
   text-decoration: none;
-  display: block;
   font-size: 16px;
   margin-right: auto;
   margin-left: auto;
@@ -74,7 +74,6 @@ button {
   min-height: 600px;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -249,6 +248,38 @@ fade {
   justify-self: center;
 }
 
+@media only screen and (min-width: 700px) {
+  #mobilePhoneIcon {
+    display: none;
+  }
+  #navContact a {
+    pointer-events: none;
+    cursor: default;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .navWrapper {
+    display: inline;
+  }
+  .navWrapper .navDropdown {
+    display: none;
+  }
+  .navWrapper #desktopOnlyNav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    text-align: center;
+    margin: 2vh 32vw;
+  }
+  .navWrapper #desktopOnlyNav li {
+    display: inline;
+  }
+  .navWrapper #desktopOnlyNav li a {
+    color: #aa9979;
+  }
+}
+
 .ourStoryGridCntnr {
   display: grid;
   grid-template-columns: 1fr;
@@ -308,7 +339,7 @@ fade {
   background-image: url("https://i.pinimg.com/originals/21/2f/91/212f91a5e064ea3087cce922f4acd32a.jpg");
   padding-top: 66%;
   background-position: center;
-  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   margin: 3vh 0;
 }
@@ -316,7 +347,7 @@ fade {
 .iframeContainer {
   position: absolute;
   width: 90%;
-  padding-top: 66%;
+  padding-top: 50%;
   margin: 0 auto;
   top: 50%;
   left: 50%;
@@ -332,13 +363,6 @@ fade {
   width: 100%;
   height: 100%;
   border-radius: 20px;
-}
-
-.sectionHeaderV2 > h1 {
-  font-size: 2rem;
-  font-style: bold;
-  padding-top: 3vh;
-  text-align: center;
 }
 
 @keyframes title_appear {
@@ -425,6 +449,18 @@ fade {
   overflow-x: scroll;
 }
 
+.itemSlide::-webkit-scrollbar {
+  /*Hide scrollbar for Chrome */
+  display: none;
+}
+
+.itemSlide {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
 .itemSlide img {
   width: 50vw;
   min-height: 17vh;
@@ -440,6 +476,19 @@ fade {
   background-repeat: no-repeat;
   background-size: cover;
   margin-top: 4vh;
+}
+
+.sectionHeaderV2 > h1 {
+  font-size: 2rem;
+  font-style: bold;
+  padding-top: 3vh;
+  text-align: center;
+}
+
+.sectionHeaderV2 > p {
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 
 #interactiveMap {
@@ -485,13 +534,45 @@ fade {
 }
 
 @media only screen and (min-width: 700px) {
-  #mobilePhoneIcon {
-    display: none;
+  .footerGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-size: cover;
+    justify-items: left;
   }
-  #navContact a {
-    pointer-events: none;
-    cursor: default;
+  .footerGridContainer div {
+    color: white;
+    padding: 0;
   }
+  .footerGridContainer h2 {
+    padding: 2vh 0;
+  }
+  .footerGridContainer li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  .footerGridContainer div:nth-child(4) {
+    grid-column: 1 / span 3;
+    padding: 0;
+    padding-top: 40px;
+    margin: 0;
+    justify-self: center;
+  }
+  .footerGridContainer div:nth-child(4):before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 2px solid white;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footerGridContainer {
+    padding-bottom: 5vh;
+  }
+}
+
+@media only screen and (min-width: 700px) {
   .pizzaChef {
     display: initial;
     height: 80%;
@@ -529,55 +610,21 @@ fade {
   .twoColGridContainer .sectionHeaderV2 {
     background-color: ivory;
   }
+  .twoColGridContainer p {
+    color: black;
+  }
   #interactiveMap {
     max-width: 100%;
     height: 30vh;
   }
-  .footerGridContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-size: cover;
-    justify-items: left;
-  }
-  .footerGridContainer div {
-    color: white;
-    padding: 0;
-  }
-  .footerGridContainer h2 {
-    padding: 2vh 0;
-  }
-  .footerGridContainer li {
-    list-style: none;
-    padding: 5px 0;
-  }
-  .footerGridContainer div:nth-child(4) {
-    grid-column: 1 / span 3;
-    padding: 0;
-    padding-top: 40px;
-    margin: 0;
-    justify-self: center;
-  }
-  .footerGridContainer div:nth-child(4):before {
-    content: "";
-    display: block;
-    width: 100%;
-    border-top: 2px solid white;
-  }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   main {
     margin: 0 2vw;
   }
   .headerBGFixed {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
     min-height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-color: black;
   }
   fade {
     position: absolute;
@@ -585,25 +632,6 @@ fade {
     width: 100%;
     height: 100px;
     background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, 0.9) 100%);
-  }
-  .navWrapper {
-    display: inline;
-  }
-  .navWrapper .navDropdown {
-    display: none;
-  }
-  .navWrapper #desktopOnlyNav {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    text-align: center;
-    margin: 2vh 32vw;
-  }
-  .navWrapper #desktopOnlyNav li {
-    display: inline;
-  }
-  .navWrapper #desktopOnlyNav li a {
-    color: #aa9979;
   }
   .navigation_grid_container {
     top: 25vh;
@@ -679,10 +707,8 @@ fade {
     margin: 20px 16vw;
     background: none;
   }
-  .container {
-    overflow: visible;
-    overflow-x: none;
-    justify-content: center;
+  .sideFade::before, .sideFade::after {
+    display: none;
   }
   .itemSlide {
     display: grid;
@@ -690,7 +716,6 @@ fade {
     grid-template-rows: repeat(5, 200px);
     align-items: center;
     justify-items: center;
-    width: 80%;
   }
   .itemSlide img:nth-child(1) {
     grid-row: 1 / 3;
@@ -736,9 +761,6 @@ fade {
   }
   .twoColGridContainer {
     margin: 20px 16vw;
-  }
-  .footerGridContainer {
-    padding-bottom: 5vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

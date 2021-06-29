@@ -82,9 +82,14 @@
     }
 }
 
+.mobileHiddenPics {
+    display: none;
+ }
+
 @import '_footerStyle.scss';
 
 @media only screen and (min-width:700px) {
+    
     .menuWrapperMain {
         margin: 0 20vw;
 
@@ -93,9 +98,12 @@
         }
     }
 
+    .mobileHiddenPics {
+       height: 100px;
+    }
+
     .menuNavContainer {
         margin: 0 20vw;
     }
-
 
 }

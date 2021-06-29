@@ -20,6 +20,7 @@
             box-shadow: initial;
             align-self: end;
         }
+        
         #menuToggle:checked ~ .dropdown-content {
             display: block;
             position: absolute;
@@ -152,4 +153,41 @@
             justify-self: center;
     }
 
+}
+
+@media only screen and (min-width:700px) {
+    #mobilePhoneIcon {
+        display: none;
+    }
+
+    #navContact a {
+        pointer-events: none; // Makes the anchor tag unclickable
+        cursor: default; //Default cursor type
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    .navWrapper {
+        display: inline;
+
+        .navDropdown {
+            display: none;
+        }
+        
+        #desktopOnlyNav {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            justify-content: center;
+            text-align: center;
+            margin: 2vh 32vw;
+        
+            li {
+                display: inline;
+                
+                a {
+                    color:rgb(170, 153, 121);
+                }
+            }
+        }
+    }
 }

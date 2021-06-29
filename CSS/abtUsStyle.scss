@@ -15,9 +15,9 @@
     border-bottom: none;
 }
 
-.OneColGrid {
+.abtUsContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     justify-items: center;
     align-items: center;
     row-gap: 5%;
@@ -45,7 +45,7 @@
 .quoteBox {
     position: relative;
     background-color: #f9f9f9;
-    border-left: 10px solid #ccc;
+    border-left: 10px solid rgb(219, 55, 55);
     padding: 6vh;
     border-radius: 10px;
     margin: 20px;
@@ -78,6 +78,13 @@
     }
 }
 
-@media only screen and (min-width: 7in) {
+@media only screen and (min-width:700px) {
+    .abtUsContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and (min-width:1000px) {
    
+    
 }
