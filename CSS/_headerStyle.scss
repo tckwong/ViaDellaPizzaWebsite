@@ -20,7 +20,7 @@
             box-shadow: initial;
             align-self: end;
         }
-        #menuToggle:checked ~ #menu {
+        #menuToggle:checked ~ .dropdown-content {
             display: block;
             position: absolute;
             animation-name: navBarReveal;
@@ -30,12 +30,13 @@
             z-index: 2;
             opacity: 95%;
         }
+        
         #menuToggle {
             display: none; //Hides the toggle checkbox from view
         }
 
         label {
-            user-select: none;
+            user-select: none; //select the icon
         }
 
         .dropdown-content {
@@ -83,28 +84,13 @@
                 padding-top: 30px;
             }
         }
-       
-        #logoInNaV:hover {
-            background-color: none;
-        }
-
-        @keyframes navBarReveal {
-            0% {opacity: 0%; left: -4vw;}
-            100% {opacity: 100%; left: 10px;}
-        }
-
-        &:hover .dropdown-content {
-            display: block;
-            position: absolute;
-            animation-name: navBarReveal;
-            animation-duration: .4s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-            z-index: 2;
-            opacity: 95%;
-        }
     }
 
+    @keyframes navBarReveal {
+        0% {opacity: 0%; left: -4vw;}
+        100% {opacity: 100%; left: 10px;}
+    }
+    
     #desktopOnlyNav {
         display: none;
         justify-self: center;
@@ -128,6 +114,7 @@
 
     }
 }
+
 .navigation_grid_container {
     position: absolute;
     top: 10vh;

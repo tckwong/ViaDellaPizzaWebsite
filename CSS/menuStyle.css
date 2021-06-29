@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +29,7 @@ h2 {
 
 q {
   text-align: center;
-  font: bold 20px "Lucida Grande";
+  font: 2rem "Lobster";
   color: #aa9979;
 }
 
@@ -153,7 +154,7 @@ button {
   align-self: end;
 }
 
-.navWrapper .navDropdown #menuToggle:checked ~ #menu {
+.navWrapper .navDropdown #menuToggle:checked ~ .dropdown-content {
   display: block;
   position: absolute;
   animation-name: navBarReveal;
@@ -219,10 +220,6 @@ button {
   padding-top: 30px;
 }
 
-.navWrapper .navDropdown #logoInNaV:hover {
-  background-color: none;
-}
-
 @keyframes navBarReveal {
   0% {
     opacity: 0%;
@@ -232,17 +229,6 @@ button {
     opacity: 100%;
     left: 10px;
   }
-}
-
-.navWrapper .navDropdown:hover .dropdown-content {
-  display: block;
-  position: absolute;
-  animation-name: navBarReveal;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  z-index: 2;
-  opacity: 95%;
 }
 
 .navWrapper #desktopOnlyNav {
@@ -327,6 +313,10 @@ button {
   display: flex;
   justify-content: center;
   margin-top: 5vh;
+  border: 2px solid #aa9979;
+  padding: 10px;
+  border-top-left-radius: 50px 50px;
+  border-top-right-radius: 50px 50px;
 }
 
 .menuNavContainer a {
@@ -336,6 +326,7 @@ button {
   padding-left: 1vw;
   font-size: 1.2rem;
   border-right: 1px solid grey;
+  margin-top: 50px;
 }
 
 .menuWrapperMain {
@@ -345,18 +336,18 @@ button {
   overflow: hidden;
   background-image: url("https://i.pinimg.com/originals/cc/2e/3c/cc2e3c6a25ef5fdb2946872ac5221354.jpg");
   scroll-behavior: smooth;
-  align-items: flex-start;
 }
 
 .menuWrapperMain .itemSlide {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 10vh;
+  padding-top: 4vh;
 }
 
 .menuWrapperMain .itemSlide > div {
   width: 100vw;
+  padding: 0 4vw;
+  margin-left: 10px;
 }
 
 .menuWrapperMain h4, .menuWrapperMain p {
@@ -365,10 +356,14 @@ button {
 
 .menuWrapperMain h4 {
   text-transform: uppercase;
+  color: #aa9979;
 }
 
 .menuWrapperMain h1 {
   padding-left: 0;
+  text-align: left;
+  margin-bottom: 10px;
+  border-bottom: 1px white solid;
 }
 
 .footerGridContainer {
@@ -405,5 +400,17 @@ button {
   box-shadow: none;
   margin: 10px;
   filter: invert(100%);
+}
+
+@media only screen and (min-width: 700px) {
+  .menuWrapperMain {
+    margin: 0 20vw;
+  }
+  .menuWrapperMain .itemSlide > div {
+    width: 60vw;
+  }
+  .menuNavContainer {
+    margin: 0 20vw;
+  }
 }
 /*# sourceMappingURL=menuStyle.css.map */

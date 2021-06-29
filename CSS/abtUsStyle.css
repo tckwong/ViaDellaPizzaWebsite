@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +30,7 @@ h2 {
 
 q {
   text-align: center;
-  font: bold 20px "Lucida Grande";
+  font: 2rem "Lobster";
   color: #aa9979;
 }
 
@@ -154,7 +156,7 @@ button {
   align-self: end;
 }
 
-.navWrapper .navDropdown #menuToggle:checked ~ #menu {
+.navWrapper .navDropdown #menuToggle:checked ~ .dropdown-content {
   display: block;
   position: absolute;
   animation-name: navBarReveal;
@@ -220,10 +222,6 @@ button {
   padding-top: 30px;
 }
 
-.navWrapper .navDropdown #logoInNaV:hover {
-  background-color: none;
-}
-
 @keyframes navBarReveal {
   0% {
     opacity: 0%;
@@ -233,17 +231,6 @@ button {
     opacity: 100%;
     left: 10px;
   }
-}
-
-.navWrapper .navDropdown:hover .dropdown-content {
-  display: block;
-  position: absolute;
-  animation-name: navBarReveal;
-  animation-duration: .4s;
-  animation-timing-function: linear;
-  animation-iteration-count: 1;
-  z-index: 2;
-  opacity: 95%;
 }
 
 .navWrapper #desktopOnlyNav {
@@ -314,8 +301,7 @@ button {
 
 .OneColGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   justify-items: center;
   align-items: center;
   row-gap: 5%;
@@ -336,11 +322,43 @@ button {
   height: 680px;
 }
 
-.sectionH2Style, .sectionH1Style {
-  text-align: center;
+.OneColGrid p {
+  color: #eee4e3;
 }
 
-.sectionH1Style {
-  padding-bottom: 8vh;
+.quoteBox {
+  position: relative;
+  background-color: #f9f9f9;
+  border-left: 10px solid #ccc;
+  padding: 6vh;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.quoteBox q:before {
+  position: absolute;
+  color: #e41212;
+  content: open-quote;
+  font-size: 4em;
+  margin-right: 10px;
+  top: 5px;
+  left: 5px;
+}
+
+.quoteBox q:after {
+  position: absolute;
+  color: #e41212;
+  content: close-quote;
+  font-size: 4em;
+  margin-right: 10px;
+  bottom: 5px;
+  right: 5px;
+}
+
+.quoteBox p {
+  text-align: center;
+  font-size: 2rem;
+  font-family: 'Gloria Hallelujah', "cursive";
+  color: #aa9979;
 }
 /*# sourceMappingURL=abtUsStyle.css.map */
