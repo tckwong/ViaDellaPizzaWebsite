@@ -51,161 +51,158 @@
                 <img id="logo" src="Media/LogoNew.png" alt="Logo">
                 <div id="pageTitle">
                     <h1>MENU</h1>
-             
                 </div>
             </div>
+        
         </header>
         <main>
             <div class="sectionHeaderV2">
                 <h1>EXPLORE OUR MENU</h1>
                 <p>View our extensive choices of the most delicious and freshest pizza, pasta and more!</p>
             </div>
-           
-            <section>
-                <div class="menuNavContainer">
-                    <label for="pizzaToggle">
-                        <p>Pizza</p>
-                    </label>
-                    <label for="pastaToggle">
-                        <p>Pasta</p>
-                    </label>
-                    <label for="dessertToggle">
-                        <p>Dessert</p>
-                    </label>
-                    <label for="kidsMenuToggle">
-                        <p>Kids Menu</p>
-                    </label>
-                </div>
-
-                <!-- Used type=radio so that only one option can be selected at a time 
+            
+            <!-- Used type=radio so that only one option can be selected at a time 
                 Added "checked" attribute so it is 'on' by default 
                 "name=" must be the same to ensure the set is part of the same radio group -->
+            <section class="menuNavContainer">
                 <input type="radio" name="menuChoice" id="pizzaToggle" checked/> 
+                <label for="pizzaToggle">
+                    <p>Pizza</p>
+                </label>
                 <input type="radio" name="menuChoice" id="pastaToggle"/> 
+                <label for="pastaToggle">
+                    <p>Pasta</p>
+                </label>
                 <input type="radio" name="menuChoice" id="dessertToggle"/>
+                <label class="checkLabel" for="dessertToggle">
+                    <p>Dessert</p>
+                </label>
                 <input type="radio" name="menuChoice" id="kidsMenuToggle"/>
-                
-                    <div id="pizza" class="itemSlide">
-                        <div>
-                            <h1>12" PIZZA</h1>
-                        </div>
-                        <div>
-                            <h4>PEPPERONI 18</h4>
-                            <p>tomatoes, mozzarella, mushrooms, caramelized onions, grana padano</p>
-                        </div>
-                        <div>
-                            <h4>SPICEY NDUJA 19</h4>
-                            <p>tomatoes, nduja crumbs, caramelised onion, mozzarella, grana padano</p>
-                        </div>
-                        <div>
-                            <h4>WILD BOAR BACON 18</h4>
-                            <p>tomatoes, mozzarella, salami, sausage, grana padano</p>
-                        </div>
-                        <div>
-                            <h4>PROSCIUTTO 20</h4>
-                            <p>fig jam, caramelized onions, mozzarella, arugula, grana padano</p>
-                        </div>
-                        <div>
-                            <h4>VEGETARIAN 17</h4>
-                            <p>tomatoes, green peppers, red onions, mushrooms,  mozzarella, grana padano</p>
-                        </div>
-                        <div>
-                            <h4>CHICKEN PESTO 17</h4>
-                            <p>chicken, pesto tomato sauce, caramelized onion, roasted red peppers, mozzarella, oregano</p>
-                        </div>
-                        <div>
-                            <h4>ROYAL HAWAIIAN 17</h4>
-                            <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
-                        </div>
-                        <div>
-                            <h4>ROYAL HAWAIIAN 17</h4>
-                            <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
-                        </div>
-                        <div>
-                            <h4>ROYAL HAWAIIAN 17</h4>
-                            <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
-                        </div>
-                    </div>
+                <label class="checkLabel" for="kidsMenuToggle">
+                    <p>Kids Menu</p>
+                </label>
+    
 
-                    <div id="pasta" class="itemSlide">
-                        <div>
-                            <h1>PASTA</h1>
-                        </div>
-                        <div>
-                            <h4>CARBONARA 13</h4>
-                            <p>spaghetti, wild boar bacon, garlic, shallots, chili flakes, egg yolk, pecorino</p>
-                            <img class="mobileHiddenPics" src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
-                        </div>
-                        <div>
-                            <h4>Supremo 13</h4>
-                            <p>scallops and smoked salmon in creamy curry sauce</p>
-                        </div>
-                        <div>
-                            <h4>Primavera 13</h4>
-                            <p>garden vegetables with tomato or cream sauce</p>
-                        </div>
-                        <div>
-                            <h4>Caribbean 13</h4>
-                            <p>garden vegetables with tomato or cream sauce</p>
-                        </div>
-                        <div>
-                            <h4>Lincolno 13</h4>
-                            <p>spinach fettuccine with susage & mushrooms in a sriracha cream sauce</p>
-                        </div>
-                        <div>
-                            <h4>Bolognese 13</h4>
-                            <p>Freshly Simmered Meat Sauce</p>
-                        </div>
-                        <div>
-                            <h4>Primavera 13</h4>
-                            <p>garden vegetables with tomato or cream sauce</p>
-                        </div>
+                <div id="pizza" class="menuDisplay">
+                    <div>
+                        <h1>12" PIZZA</h1>
                     </div>
-                    
-                    <div id="dessert" class="itemSlide">
-                        <div>
-                            <h1>DESSERT</h1>
-                        </div>
-                        <div>
-                            <h4>WHITE CHOCOLATE BROWNIE 9</h4>
-                            <p>warm chocolate sauce, french vanilla ice cream & whipped cream</p>
-                        </div>
-                        <div>
-                            <h4>Bacio Carmello 9</h4>
-                            <p>Chocolate covered chocolate gelato with salted caramel center.</p>
-                        </div>
-                        <div>
-                            <h4>Gluten Free Chocolate Almond Torte 9</h4>
-                            <p>Chocolate covered chocolate gelato with salted caramel center.</p>
-                        </div>
-                        <div>
-                            <h4>Chocolate Hazelnut Pear Gelato 9</h4>
-                            <p>Pear shaped hazelnut ice cream dipped in Belgian chocolate and dusted with caramel pieces.</p>
-                        </div>
+                    <div>
+                        <h4>PEPPERONI 18</h4>
+                        <p>tomatoes, mozzarella, mushrooms, caramelized onions, grana padano</p>
                     </div>
-                    
-                    <div id="kidsMenu" class="itemSlide">
-                        <div>
-                            <h1>KIDS MENU</h1>
-                        </div>
-                        <div>
-                            <h4>CHICKEN FINGERS COMBO 10</h4>
-                            <p>4 piece chicken tender with choice of side (fries, salad, mashed potatoes)</p>
-                        </div>
-                        <div>
-                            <h4>ALFREDO PASTA 12</h4>
-                            <p>rich creamy parmesan cheese sauce</p>
-                        </div>
-                        <div>
-                            <h4>6" Pepporoni PIZZA 12</h4>
-                            <p>Choice of Pepporoni, Hawaiian, BBQ Chicken, Vegetarian</p>
-                        </div>
-                        <div>
-                            <h4>Cheese Sandwich</h4>
-                            <p>toasted melted cheese sandwich with a choice of a side</p>
-                        </div>
+                    <div>
+                        <h4>SPICEY NDUJA 19</h4>
+                        <p>tomatoes, nduja crumbs, caramelised onion, mozzarella, grana padano</p>
                     </div>
-             
+                    <div>
+                        <h4>WILD BOAR BACON 18</h4>
+                        <p>tomatoes, mozzarella, salami, sausage, grana padano</p>
+                    </div>
+                    <div>
+                        <h4>PROSCIUTTO 20</h4>
+                        <p>fig jam, caramelized onions, mozzarella, arugula, grana padano</p>
+                    </div>
+                    <div>
+                        <h4>VEGETARIAN 17</h4>
+                        <p>tomatoes, green peppers, red onions, mushrooms,  mozzarella, grana padano</p>
+                    </div>
+                    <div>
+                        <h4>CHICKEN PESTO 17</h4>
+                        <p>chicken, pesto tomato sauce, caramelized onion, roasted red peppers, mozzarella, oregano</p>
+                    </div>
+                    <div>
+                        <h4>ROYAL HAWAIIAN 17</h4>
+                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
+                    </div>
+                    <div>
+                        <h4>ROYAL HAWAIIAN 17</h4>
+                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
+                    </div>
+                    <div>
+                        <h4>ROYAL HAWAIIAN 17</h4>
+                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
+                    </div>
+                </div>
+
+                <div id="pasta" class="menuDisplay">
+                    <div>
+                        <h1>PASTA</h1>
+                    </div>
+                    <div>
+                        <h4>CARBONARA 13</h4>
+                        <p>spaghetti, wild boar bacon, garlic, shallots, chili flakes, egg yolk, pecorino</p>
+                        <img class="mobileHiddenPics" src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
+                    </div>
+                    <div>
+                        <h4>Supremo 13</h4>
+                        <p>scallops and smoked salmon in creamy curry sauce</p>
+                    </div>
+                    <div>
+                        <h4>Primavera 13</h4>
+                        <p>garden vegetables with tomato or cream sauce</p>
+                    </div>
+                    <div>
+                        <h4>Caribbean 13</h4>
+                        <p>garden vegetables with tomato or cream sauce</p>
+                    </div>
+                    <div>
+                        <h4>Lincolno 13</h4>
+                        <p>spinach fettuccine with susage & mushrooms in a sriracha cream sauce</p>
+                    </div>
+                    <div>
+                        <h4>Bolognese 13</h4>
+                        <p>Freshly Simmered Meat Sauce</p>
+                    </div>
+                    <div>
+                        <h4>Primavera 13</h4>
+                        <p>garden vegetables with tomato or cream sauce</p>
+                    </div>
+                </div>
+                
+                <div id="dessert" class="menuDisplay">
+                    <div>
+                        <h1>DESSERT</h1>
+                    </div>
+                    <div>
+                        <h4>WHITE CHOCOLATE BROWNIE 9</h4>
+                        <p>warm chocolate sauce, french vanilla ice cream & whipped cream</p>
+                    </div>
+                    <div>
+                        <h4>Bacio Carmello 9</h4>
+                        <p>Chocolate covered chocolate gelato with salted caramel center.</p>
+                    </div>
+                    <div>
+                        <h4>Gluten Free Chocolate Almond Torte 9</h4>
+                        <p>Chocolate covered chocolate gelato with salted caramel center.</p>
+                    </div>
+                    <div>
+                        <h4>Chocolate Hazelnut Pear Gelato 9</h4>
+                        <p>Pear shaped hazelnut ice cream dipped in Belgian chocolate and dusted with caramel pieces.</p>
+                    </div>
+                </div>
+                
+                <div id="kidsMenu" class="menuDisplay">
+                    <div>
+                        <h1>KIDS MENU</h1>
+                    </div>
+                    <div>
+                        <h4>CHICKEN FINGERS COMBO 10</h4>
+                        <p>4 piece chicken tender with choice of side (fries, salad, mashed potatoes)</p>
+                    </div>
+                    <div>
+                        <h4>ALFREDO PASTA 12</h4>
+                        <p>rich creamy parmesan cheese sauce</p>
+                    </div>
+                    <div>
+                        <h4>6" Pepporoni PIZZA 12</h4>
+                        <p>Choice of Pepporoni, Hawaiian, BBQ Chicken, Vegetarian</p>
+                    </div>
+                    <div>
+                        <h4>Cheese Sandwich</h4>
+                        <p>toasted melted cheese sandwich with a choice of a side</p>
+                    </div>
+                </div>
             </section>
         </main>
         

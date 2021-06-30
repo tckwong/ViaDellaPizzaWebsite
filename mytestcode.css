@@ -14,9 +14,38 @@ input[type="radio"]:checked {
   box-shadow: 0 0 0 3px orange;
 }
 label {
+  position: relative;
   user-select: none;
   display: inline-block;
   cursor: pointer;
+  background-color: aqua;
+  padding: 20px;
+  border-radius: 25px;
+  background-size: 120%;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  width: 150px;
+  height: 100px;
 }
 
+label > p {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+ }
+
+ input[type="radio"]:checked + label {
+  border: 5px solid red;
+}
+
+label:nth-child(1):hover {
+  background-image: url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
+}
+
+label:hover:nth-child(4) {
+  background-image: url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
+}
 

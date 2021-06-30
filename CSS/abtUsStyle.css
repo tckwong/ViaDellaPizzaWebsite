@@ -172,6 +172,7 @@ button {
 
 .navWrapper .navDropdown label {
   user-select: none;
+  cursor: pointer;
 }
 
 .navWrapper .navDropdown .dropdown-content {
