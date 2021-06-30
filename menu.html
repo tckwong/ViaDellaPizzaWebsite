@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Page - Okotoks Pizza</title>
+    <title>Via Della Pizza - Menu Page</title>
     <meta name="description" content="Via Della Pizza restaurant full menu. ">
     <meta name="keywords" content="Pizza, delicious, Okotoks, restaurant, Italian restaurant, pizza menu, pepporoni pizza, chicken, vegetarian, meat lovers, Hawaiian, pasta, desserts">
     <meta name="author" content="Doug Pizza">
@@ -58,19 +58,34 @@
         <main>
             <div class="sectionHeaderV2">
                 <h1>EXPLORE OUR MENU</h1>
-                <p>View our extensive choices of the most delicious and freshest pizza, pasta and others.</p>
+                <p>View our extensive choices of the most delicious and freshest pizza, pasta and more!</p>
             </div>
            
-            <section id="ss">
+            <section>
                 <div class="menuNavContainer">
-                    <a href="#piz">Pizza</a>
-                    <a href="#pas">Pasta</a>
-                    <a href="#des">Dessert</a>
-                    <a href="#kid">Kids Menu</a>
+                    <label for="pizzaToggle">
+                        <p>Pizza</p>
+                    </label>
+                    <label for="pastaToggle">
+                        <p>Pasta</p>
+                    </label>
+                    <label for="dessertToggle">
+                        <p>Dessert</p>
+                    </label>
+                    <label for="kidsMenuToggle">
+                        <p>Kids Menu</p>
+                    </label>
                 </div>
 
-                <div class="menuWrapperMain">
-                    <div id="piz" class="itemSlide">
+                <!-- Used type=radio so that only one option can be selected at a time 
+                Added "checked" attribute so it is 'on' by default 
+                "name=" must be the same to ensure the set is part of the same radio group -->
+                <input type="radio" name="menuChoice" id="pizzaToggle" checked/> 
+                <input type="radio" name="menuChoice" id="pastaToggle"/> 
+                <input type="radio" name="menuChoice" id="dessertToggle"/>
+                <input type="radio" name="menuChoice" id="kidsMenuToggle"/>
+                
+                    <div id="pizza" class="itemSlide">
                         <div>
                             <h1>12" PIZZA</h1>
                         </div>
@@ -112,7 +127,7 @@
                         </div>
                     </div>
 
-                    <div id="pas" class="itemSlide">
+                    <div id="pasta" class="itemSlide">
                         <div>
                             <h1>PASTA</h1>
                         </div>
@@ -147,7 +162,7 @@
                         </div>
                     </div>
                     
-                    <div id="des" class="itemSlide">
+                    <div id="dessert" class="itemSlide">
                         <div>
                             <h1>DESSERT</h1>
                         </div>
@@ -169,9 +184,9 @@
                         </div>
                     </div>
                     
-                    <div class="itemSlide">
+                    <div id="kidsMenu" class="itemSlide">
                         <div>
-                            <h1 id="kid">KIDS MENU</h1>
+                            <h1>KIDS MENU</h1>
                         </div>
                         <div>
                             <h4>CHICKEN FINGERS COMBO 10</h4>
@@ -190,11 +205,11 @@
                             <p>toasted melted cheese sandwich with a choice of a side</p>
                         </div>
                     </div>
-                </div>
+             
             </section>
         </main>
-        <footer class="footerGridContainer">
         
+        <footer class="footerGridContainer">
             <div>
                 <h2>Contact Us</h2>
                 <li><a target="_blank" href="mailto:okotokspizza@gmail.com"> okotokspizza@gmail.com</a></li>

@@ -25,45 +25,65 @@
     border-bottom: none;
 }
 
+//Menu code - used checkbox toggle to display active menu page
 .menuNavContainer {
     display: flex;
     justify-content: center;
     margin-top: 5vh;
     border: 2px solid rgb(170, 153, 121);
-    padding: 10px;
     border-top-left-radius: 50px 50px;
     border-top-right-radius: 50px 50px;
     
-    a {
-        list-style-type: none;
-        text-align: center;
+    label {
+        user-select: none;
+        display: inline-block;
+        cursor: pointer;
         padding-right: 1vw;
         padding-left: 1vw;
         font-size: 1.2rem;
         border-right: 1px solid grey;
         margin-top: 50px;
+        text-align: center;
     }
 }
 
-.menuWrapperMain {
+#pizza, #pizzaToggle, #pasta, #pastaToggle, #dessert, #dessertToggle, #kidsMenu, #kidsMenuToggle  {
+    display: none;
+}
+  
+#pizzaToggle:checked ~ #pizza {
+    display: block;
+}
+  
+#pastaToggle:checked ~ #pasta {
+    display: block;
+}
+
+#dessertToggle:checked ~ #dessert {
+    display: block;
+}
+
+#kidsMenuToggle:checked ~ #kidsMenu {
+    display: block;
+}
+  
+label {
+    user-select: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.itemSlide {
     display: flex;
-    position: relative;
-    overflow-x: scroll;
-    overflow: hidden;
+    flex-direction: column;
+    padding-top: 4vh;
     background-image: url('https://i.pinimg.com/originals/cc/2e/3c/cc2e3c6a25ef5fdb2946872ac5221354.jpg');
-    scroll-behavior: smooth;
+}
 
-    .itemSlide {
-        display: flex;
-        flex-direction: column;
-        padding-top: 4vh;
-    }
-
-    .itemSlide > div {
-        width: 100vw;
-        padding: 0 4vw;
-        margin-left: 10px;
-    }
+.itemSlide > div {
+    width: 80vw;
+    padding: 0 4vw;
+    margin-left: 10px;
 
     h4, p {
         color: white;
@@ -73,7 +93,7 @@
         text-transform: uppercase;
         color:rgb(170, 153, 121);
     }
-
+    
     h1 {
         padding-left: 0;
         text-align: left;

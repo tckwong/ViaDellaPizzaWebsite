@@ -346,52 +346,71 @@ button {
   justify-content: center;
   margin-top: 5vh;
   border: 2px solid #aa9979;
-  padding: 10px;
   border-top-left-radius: 50px 50px;
   border-top-right-radius: 50px 50px;
 }
 
-.menuNavContainer a {
-  list-style-type: none;
-  text-align: center;
+.menuNavContainer label {
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
   padding-right: 1vw;
   padding-left: 1vw;
   font-size: 1.2rem;
   border-right: 1px solid grey;
   margin-top: 50px;
+  text-align: center;
 }
 
-.menuWrapperMain {
-  display: flex;
-  position: relative;
-  overflow-x: scroll;
-  overflow: hidden;
-  background-image: url("https://i.pinimg.com/originals/cc/2e/3c/cc2e3c6a25ef5fdb2946872ac5221354.jpg");
-  scroll-behavior: smooth;
+#pizza, #pizzaToggle, #pasta, #pastaToggle, #dessert, #dessertToggle, #kidsMenu, #kidsMenuToggle {
+  display: none;
 }
 
-.menuWrapperMain .itemSlide {
+#pizzaToggle:checked ~ #pizza {
+  display: block;
+}
+
+#pastaToggle:checked ~ #pasta {
+  display: block;
+}
+
+#dessertToggle:checked ~ #dessert {
+  display: block;
+}
+
+#kidsMenuToggle:checked ~ #kidsMenu {
+  display: block;
+}
+
+label {
+  user-select: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.itemSlide {
   display: flex;
   flex-direction: column;
   padding-top: 4vh;
+  background-image: url("https://i.pinimg.com/originals/cc/2e/3c/cc2e3c6a25ef5fdb2946872ac5221354.jpg");
 }
 
-.menuWrapperMain .itemSlide > div {
-  width: 100vw;
+.itemSlide > div {
+  width: 80vw;
   padding: 0 4vw;
   margin-left: 10px;
 }
 
-.menuWrapperMain h4, .menuWrapperMain p {
+.itemSlide > div h4, .itemSlide > div p {
   color: white;
 }
 
-.menuWrapperMain h4 {
+.itemSlide > div h4 {
   text-transform: uppercase;
   color: #aa9979;
 }
 
-.menuWrapperMain h1 {
+.itemSlide > div h1 {
   padding-left: 0;
   text-align: left;
   margin-bottom: 10px;
