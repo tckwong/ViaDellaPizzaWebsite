@@ -20,26 +20,23 @@
     padding: 2vh 10vw;
 }
 
-.navigation_grid_container #pageTitle > h1:after { // Removes the line separater from title
+.navigation_grid_container #pageTitle > h1:after { // Removes the line separater from header
     display: none;
     border-bottom: none;
 }
-
-//Menu code - used checkbox toggle to display active menu page
 
 .menuNavContainer {
     text-align: center;
     border: 2px solid rgb(170, 153, 121);
     border-top-left-radius: 50px 50px;
     border-top-right-radius: 50px 50px;
-    
 }
-label {
+
+.menuLabel {
     position: relative;
     user-select: none;
     display: inline-block;
     cursor: pointer;
-    padding: 20px;
     border-radius: 25px;
     background-size: 120%;
     background-repeat: no-repeat;
@@ -50,10 +47,13 @@ label {
     padding-left: 1vw;
     font-size: 1.2rem;
     border-right: 1px solid grey;
-    margin-top: 50px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 1px solid black;
+    box-shadow: 0px 0px 4px #1d1c1c;
 
     p {
-        color: white;
+        color: rgb(170, 153, 121);
         position: absolute;
         top: 50%;
         left: 50%;
@@ -62,49 +62,69 @@ label {
 }
 
 //Initiate hover background
-label:nth-child(2):hover {
+.menuLabel:nth-child(2):hover {
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, .2)), url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
+    p {
+        color: white;
+    }
 }
 
-label:nth-child(4):hover {
+.menuLabel:nth-child(4):hover {
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, .2)), url('https://i.pinimg.com/originals/28/80/21/288021e54efdcf0f01039ba1608ca2fd.jpg');
     background-size: 120%;
+    p {
+        color: white;
+    }
 }
 
-label:nth-child(6):hover {
+.menuLabel:nth-child(6):hover {
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, .2)), url('https://i.pinimg.com/originals/7e/42/0a/7e420a4692d6070d9f3b2ce5cd6c5c7b.jpg');
     background-position: -30px -80px;
+    p {
+        color: white;
+    }
 }
 
-label:nth-child(8):hover {
+.menuLabel:nth-child(8):hover {
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, .2)), url('https://i.pinimg.com/originals/25/6e/e4/256ee47db5ecfb4b1d2b78376e52d86e.jpg');
     background-position: -10px 0;
+    p {
+        color: white;
+    }
 }
 
 input[type="radio"]:checked + label:nth-child(2) {
-    border: 5px solid red;
+    border: 5px solid rgb(170, 153, 121);;
     background-image: url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
+    p {
+        color: white;
+    }
 }
 
 input[type="radio"]:checked + label:nth-child(4) {
-    border: 5px solid red;
+    border: 5px solid rgb(44, 95, 206);
     background-image: url('https://i.pinimg.com/originals/28/80/21/288021e54efdcf0f01039ba1608ca2fd.jpg');
+    p {
+        color: white;
+    }
 }
 
 input[type="radio"]:checked + label:nth-child(6) {
-    border: 5px solid red;
+    border: 5px solid rgb(224, 154, 23);
     background-image: url('https://i.pinimg.com/originals/7e/42/0a/7e420a4692d6070d9f3b2ce5cd6c5c7b.jpg');
     background-position: -30px -80px;
+    p {
+        color: white;
+    }
 }
 
 input[type="radio"]:checked + label:nth-child(8) {
-    border: 5px solid red;
+    border: 5px solid rgb(71, 151, 84);
     background-image: url('https://i.pinimg.com/originals/25/6e/e4/256ee47db5ecfb4b1d2b78376e52d86e.jpg');
     background-position: -10px 0;
-}
- /* Radio element, when checked */
-input[type="radio"]:checked + label {
-    border: 5px solid red;
+    p {
+        color: white;
+    }
 }
 
 #pizza, #pizzaToggle, #pasta, #pastaToggle, #dessert, #dessertToggle, #kidsMenu, #kidsMenuToggle {
@@ -163,6 +183,25 @@ label {
     }
 }
 
+#pizzSzePrcs  {
+    padding: 0 4vw;
+    th {
+        color:rgb(170, 153, 121);
+        padding: 0 2vw;
+        font-size: 1rem;
+        padding-bottom: 10px;
+    }
+    td {
+        color: white;
+        padding-bottom: 10px;
+    }
+   
+    #tblHead {
+        padding-right:0;
+    }
+   
+}
+
 .mobileHiddenPics {
     display: none;
  }
@@ -171,15 +210,42 @@ label {
 
 @media only screen and (min-width:700px) {
     
-
     .mobileHiddenPics {
+        display: inline-block;
         height: 100px;
+        box-shadow: 3px 4px 6px #1d1c1c;
+        border-radius: 10px;
     }
+
     .menuNavContainer {
-        margin: 0 20vw;
+        margin: 0 10vw;
+        margin-bottom: 5vh;
+        margin-left: 0;
     }
 
+    .menuLabel {
+        margin: 20px;
+        margin-right: 10px;
+        width: 230px;
+        height: 150px;
+    }
 
-
+    #menuGridTabDesk {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-left: 0;
+        justify-items: center;
+        align-items: center;
+    }
     
+    #pizzSzePrcs {
+        margin-left:auto; 
+        margin-right:auto;
+    }
+
+    .menuDisplay > div > h1 {
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
 }

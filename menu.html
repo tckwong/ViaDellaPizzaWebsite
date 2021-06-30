@@ -66,65 +66,81 @@
                 "name=" must be the same to ensure the set is part of the same radio group -->
             <section class="menuNavContainer">
                 <input type="radio" name="menuChoice" id="pizzaToggle" checked/> 
-                <label for="pizzaToggle">
+                <label class="menuLabel" for="pizzaToggle">
                     <p>Pizza</p>
                 </label>
                 <input type="radio" name="menuChoice" id="pastaToggle"/> 
-                <label for="pastaToggle">
+                <label class="menuLabel" for="pastaToggle">
                     <p>Pasta</p>
                 </label>
                 <input type="radio" name="menuChoice" id="dessertToggle"/>
-                <label class="checkLabel" for="dessertToggle">
+                <label class="menuLabel" class="checkLabel" for="dessertToggle">
                     <p>Dessert</p>
                 </label>
                 <input type="radio" name="menuChoice" id="kidsMenuToggle"/>
-                <label class="checkLabel" for="kidsMenuToggle">
-                    <p>Kids Menu</p>
+                <label class="menuLabel" for="kidsMenuToggle">
+                    <p>Kids</p>
                 </label>
     
 
                 <div id="pizza" class="menuDisplay">
+                    <table id="pizzSzePrcs">
+                        <tr>
+                            <th id="tblHead">10"</th>
+                            <th>1 PIZZA</th>
+                            <th>2 PIZZA</th>
+                            <th>3 PIZZA</th>
+                        </tr>
+                        <tr>
+                            <th id="tblHead">12"</th>
+                            <td>$12.99</td>
+                            <td>$21.99</td>
+                            <td>$28.99</td>
+                        </tr>
+                        <tr>
+                            <th id="tblHead">14"</th>
+                            <td>$16.99</td>
+                            <td>$24.99</td>
+                            <td>$31.99</td>
+                        </tr>
+                    </table>
+               
                     <div>
-                        <h1>12" PIZZA</h1>
+                        <h1>SPECIALTY PIZZA</h1>
                     </div>
+                    <div id="menuGridTabDesk">
                     <div>
-                        <h4>PEPPERONI 18</h4>
+                        <h4>PEPPERONI</h4>
                         <p>tomatoes, mozzarella, mushrooms, caramelized onions, grana padano</p>
+                        <img class="mobileHiddenPics" src="Media/pizza2.png" alt="pizza menu pictures">
                     </div>
                     <div>
-                        <h4>SPICEY NDUJA 19</h4>
+                        <h4>SPICEY NDUJA</h4>
                         <p>tomatoes, nduja crumbs, caramelised onion, mozzarella, grana padano</p>
+                        <img class="mobileHiddenPics" src="Media/pizza3.jpg" alt="pizza menu pictures">
                     </div>
                     <div>
-                        <h4>WILD BOAR BACON 18</h4>
+                        <h4>WILD BOAR BACON</h4>
                         <p>tomatoes, mozzarella, salami, sausage, grana padano</p>
+                        <img class="mobileHiddenPics" src="Media/pizza4.jpg" alt="pizza menu pictures">
                     </div>
                     <div>
-                        <h4>PROSCIUTTO 20</h4>
+                        <h4>PROSCIUTTO</h4>
                         <p>fig jam, caramelized onions, mozzarella, arugula, grana padano</p>
+                        <img class="mobileHiddenPics" src="Media/pizza5.jpg" alt="pizza menu pictures">
                     </div>
                     <div>
-                        <h4>VEGETARIAN 17</h4>
+                        <h4>VEGETARIAN</h4>
                         <p>tomatoes, green peppers, red onions, mushrooms,  mozzarella, grana padano</p>
+                        <img class="mobileHiddenPics" src="Media/pizza6.jpg" alt="pizza menu pictures">
                     </div>
                     <div>
-                        <h4>CHICKEN PESTO 17</h4>
-                        <p>chicken, pesto tomato sauce, caramelized onion, roasted red peppers, mozzarella, oregano</p>
-                    </div>
-                    <div>
-                        <h4>ROYAL HAWAIIAN 17</h4>
-                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
-                    </div>
-                    <div>
-                        <h4>ROYAL HAWAIIAN 17</h4>
-                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
-                    </div>
-                    <div>
-                        <h4>ROYAL HAWAIIAN 17</h4>
-                        <p>Sweet Thai honey garlic, Gouda, provolone, Parmesan, pizza mozzarella, red onions, smoked prosciutto, bacon, grilled pineapple, and toasted sesame seeds.</p>
+                        <h4>CHICKEN PESTO</h4>
+                        <p>chicken, pesto tomato sauce, roasted red peppers, mozzarella</p>
+                        <img class="mobileHiddenPics" src="Media/pizza2.png" alt="pizza menu pictures">
                     </div>
                 </div>
-
+                </div>
                 <div id="pasta" class="menuDisplay">
                     <div>
                         <h1>PASTA</h1>
@@ -132,7 +148,6 @@
                     <div>
                         <h4>CARBONARA 13</h4>
                         <p>spaghetti, wild boar bacon, garlic, shallots, chili flakes, egg yolk, pecorino</p>
-                        <img class="mobileHiddenPics" src="https://images.pexels.com/photos/315755/pexels-photo-315755.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260">
                     </div>
                     <div>
                         <h4>Supremo 13</h4>
@@ -170,15 +185,19 @@
                     </div>
                     <div>
                         <h4>Bacio Carmello 9</h4>
-                        <p>Chocolate covered chocolate gelato with salted caramel center.</p>
+                        <p>Chocolate covered chocolate gelato with salted caramel center</p>
                     </div>
                     <div>
                         <h4>Gluten Free Chocolate Almond Torte 9</h4>
-                        <p>Chocolate covered chocolate gelato with salted caramel center.</p>
+                        <p>Chocolate covered chocolate gelato with salted caramel center</p>
                     </div>
                     <div>
                         <h4>Chocolate Hazelnut Pear Gelato 9</h4>
                         <p>Pear shaped hazelnut ice cream dipped in Belgian chocolate and dusted with caramel pieces.</p>
+                    </div>
+                    <div>
+                        <h4>Tiramisu 9</h4>
+                        <p>taste of Italian heaven paired with your favourite coffee</p>
                     </div>
                 </div>
                 
@@ -195,14 +214,19 @@
                         <p>rich creamy parmesan cheese sauce</p>
                     </div>
                     <div>
-                        <h4>6" Pepporoni PIZZA 12</h4>
+                        <h4>6" PIZZA 12</h4>
                         <p>Choice of Pepporoni, Hawaiian, BBQ Chicken, Vegetarian</p>
                     </div>
                     <div>
-                        <h4>Cheese Sandwich</h4>
+                        <h4>Cheese Sandwich 10</h4>
                         <p>toasted melted cheese sandwich with a choice of a side</p>
                     </div>
+                    <div>
+                        <h4>Macaroni and Cheese 10<h4>
+                        <p>Tasty Mac & Cheese - a kid's favourite</p>
+                    </div>
                 </div>
+          
             </section>
         </main>
         
