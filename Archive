@@ -1,19 +1,35 @@
+.quoteBox {
+    position: relative;
+    background-color: #f9f9f9;
+    border-left: 10px solid rgb(219, 55, 55);
+    padding: 6vh;
+    border-radius: 10px;
+    margin: 20px;
 
- #meetTheTeam {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        grid-template-rows: 1fr 1fr;
-        background-color: rgb(55, 0, 255);
-        
-        div {
-            height: 200px;
- 
-            background-color: rgb(9, 255, 0);
-        }
-
-        
+    q:before {
+        position: absolute;
+        color: rgb(228, 18, 18);
+        content: open-quote;
+        font-size: 4em;
+        margin-right: 10px;
+        top: 5px;
+        left: 5px;
     }
-}
-#spanny {
-    grid-column: 1/3;
+
+    q:after {
+        position: absolute;
+        color: rgb(228, 18, 18);
+        content: close-quote;
+        font-size: 4em;
+        margin-right: 10px;
+        bottom: 5px;
+        right: 5px;
+    }
+    
+    p {
+        text-align: center;
+        font-size: 2rem;
+        font-family: 'Gloria Hallelujah', "cursive";
+        color:rgb(170, 153, 121);
+    }
 }

@@ -27,6 +27,10 @@
     min-height: 300px;
 }
 
+#prgrphSeparater {
+    display: none;
+}
+
 .sectionHeader {
     position: relative;
     
@@ -193,6 +197,10 @@
 
 @media only screen and (min-width:700px) {
    
+    .headerBGFixed {
+        min-height: $parallaxMinHeight*1.2;
+    }
+
    .ourStoryGridCntnr {
         grid-template-columns: 1fr 1.5fr 1fr;
         margin: 0 2vw;
@@ -295,7 +303,13 @@
     .navigation_grid_container #pageTitle > p {
         @include pageLoadAppearP($fontSze*1.2);
     }
- 
+    
+    .navigation_grid_container {
+        #logo {
+            height: 200px;
+        }
+    }
+    
     .ourStoryGridCntnr {
         margin-top: 20px;
          
@@ -306,6 +320,15 @@
     
     .sectionHeader > .paraMobileHide {
         display: block;
+    }
+
+    #prgrphSeparater {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        height: 35px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
 
     .videoBanner { 

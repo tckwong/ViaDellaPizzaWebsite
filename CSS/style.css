@@ -86,6 +86,15 @@ button a {
   background-size: cover;
 }
 
+.headerBGFixed:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 90px;
+  background-image: linear-gradient(to bottom, rgba(27, 25, 25, 0), rgba(0, 0, 0, 0.8) 100%);
+}
+
 .headerBGFixed:after {
   position: absolute;
   content: "";
@@ -216,13 +225,13 @@ button a {
   height: 38px;
   box-shadow: none;
   justify-self: end;
-  margin-top: 10px;
+  margin-top: 8px;
   margin-right: 18px;
 }
 
 .navigation_grid_container {
   position: absolute;
-  top: 10vh;
+  top: 100px;
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
@@ -259,9 +268,6 @@ button a {
 }
 
 @media only screen and (min-width: 700px) {
-  .headerBGFixed {
-    min-height: 600px;
-  }
   #mobilePhoneIcon {
     display: none;
   }
@@ -316,6 +322,10 @@ button a {
 
 #imgMobileOnly {
   min-height: 300px;
+}
+
+#prgrphSeparater {
+  display: none;
 }
 
 .sectionHeader {
@@ -588,6 +598,9 @@ button a {
 }
 
 @media only screen and (min-width: 700px) {
+  .headerBGFixed {
+    min-height: 600px;
+  }
   .ourStoryGridCntnr {
     grid-template-columns: 1fr 1.5fr 1fr;
     margin: 0 2vw;
@@ -702,6 +715,9 @@ button a {
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
   }
+  .navigation_grid_container #logo {
+    height: 200px;
+  }
   .ourStoryGridCntnr {
     margin-top: 20px;
   }
@@ -710,6 +726,14 @@ button a {
   }
   .sectionHeader > .paraMobileHide {
     display: block;
+  }
+  #prgrphSeparater {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
   .videoBanner {
     padding-top: 50%;
