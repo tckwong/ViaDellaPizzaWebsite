@@ -1,18 +1,10 @@
 //global variables
-$parallaxMinHeight: 600px;
+$parallaxMinHeight: 500px;
 $fancyFontHeading: "libre baskerville", serif;
 $fontSze: 1rem;
 $titlePositionY: 40vh;
 $titlePositionX: 50%;
 $fadeHeight: 60px;
-
-@mixin edgeFade($fadeHeight) {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: $fadeHeight;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, .9) 100%);
-}
 
 @mixin pageLoadAppearH1 ($fontSze) {
     opacity: 0%;

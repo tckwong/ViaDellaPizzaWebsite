@@ -55,34 +55,44 @@ img {
 
 button {
   display: block;
-  background-color: #eeeae3;
-  border: 5px, black;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  padding: 1vh 6vw;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  /*Block centering*/
   margin-right: auto;
   margin-left: auto;
+  background-color: #eeeae3;
+  border: 5px, black;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 80vw;
+  height: 80px;
+  min-width: 1px;
+}
+
+button a {
+  text-decoration: none;
+  color: #aa9979;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .headerBGFixed {
   position: relative;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
-  min-height: 600px;
+  min-height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 
-fade {
+.headerBGFixed:after {
   position: absolute;
-  bottom: 0px;
+  content: "";
+  bottom: 0;
   width: 100%;
   height: 60px;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, 0.9) 100%);
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, 0.8) 100%);
 }
 
 .navWrapper {
@@ -127,7 +137,6 @@ fade {
 
 .navWrapper .navDropdown label {
   user-select: none;
-  cursor: pointer;
 }
 
 .navWrapper .navDropdown .dropdown-content {
@@ -250,6 +259,9 @@ fade {
 }
 
 @media only screen and (min-width: 700px) {
+  .headerBGFixed {
+    min-height: 600px;
+  }
   #mobilePhoneIcon {
     display: none;
   }
@@ -294,18 +306,16 @@ fade {
   object-fit: cover;
 }
 
-.ourStoryGridCntnr button {
-  margin-right: auto;
-  margin-left: auto;
-  width: 80%;
-}
-
 .ourStoryGridCntnr #imgRight {
   display: none;
 }
 
 .pizzaChef {
   display: none;
+}
+
+#imgMobileOnly {
+  min-height: 300px;
 }
 
 .sectionHeader {
@@ -333,6 +343,10 @@ fade {
   box-shadow: none;
   height: 40px;
   object-fit: contain;
+}
+
+.sectionHeader .paraMobileHide {
+  display: none;
 }
 
 .videoBanner {
@@ -471,7 +485,7 @@ fade {
 .bannerParallax {
   position: relative;
   background-image: url("https://i.pinimg.com/originals/34/fc/9a/34fc9af7947ff794b319065807bae02e.jpg");
-  min-height: 300px;
+  min-height: 250px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -574,11 +588,6 @@ fade {
 }
 
 @media only screen and (min-width: 700px) {
-  .pizzaChef {
-    display: initial;
-    height: 80%;
-    margin: 0;
-  }
   .ourStoryGridCntnr {
     grid-template-columns: 1fr 1.5fr 1fr;
     margin: 0 2vw;
@@ -591,6 +600,18 @@ fade {
     display: inherit;
     object-fit: contain;
     box-shadow: none;
+    height: 100%;
+  }
+  .ourStoryGridCntnr .pizzaChef {
+    display: inline-block;
+    height: 100%;
+    margin: 0;
+    width: 90%;
+    padding-bottom: 20px;
+    box-shadow: none;
+  }
+  button {
+    width: 250px;
   }
   .iframeContainer {
     width: 70%;
@@ -600,7 +621,7 @@ fade {
     width: 45vw;
     height: 25vh;
   }
-  .twoColGridContainer {
+  .findUsColContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -608,10 +629,10 @@ fade {
     padding: 5vh 16vw;
     column-gap: 5px;
   }
-  .twoColGridContainer .sectionHeaderV2 {
+  .findUsColContainer .sectionHeaderV2 {
     background-color: ivory;
   }
-  .twoColGridContainer p {
+  .findUsColContainer p {
     color: black;
   }
   #interactiveMap {
@@ -621,18 +642,11 @@ fade {
 }
 
 @media only screen and (min-width: 1000px) {
-  main {
-    margin: 0 2vw;
+  .headerBGFixed:after {
+    height: 102px;
   }
   .headerBGFixed {
     min-height: 100vh;
-  }
-  fade {
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: 100px;
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, 0.9) 100%);
   }
   .navigation_grid_container {
     top: 25vh;
@@ -694,14 +708,17 @@ fade {
   .ourStoryGridCntnr p {
     font-size: 14px;
   }
+  .sectionHeader > .paraMobileHide {
+    display: block;
+  }
   .videoBanner {
-    padding-top: 33%;
+    padding-top: 50%;
   }
   .iframeContainer {
     padding-top: 33%;
   }
   .iframeContainer {
-    width: 50%;
+    width: 55%;
     padding-top: 33%;
   }
   .wrapper {
@@ -717,6 +734,7 @@ fade {
     grid-template-rows: repeat(5, 200px);
     align-items: center;
     justify-items: center;
+    margin: 0 5vw;
   }
   .itemSlide img:nth-child(1) {
     grid-row: 1 / 3;
@@ -758,9 +776,9 @@ fade {
     margin: 0;
   }
   .bannerParallax {
-    min-height: 360px;
+    min-height: 300px;
   }
-  .twoColGridContainer {
+  .findUsColContainer {
     margin: 20px 16vw;
   }
 }

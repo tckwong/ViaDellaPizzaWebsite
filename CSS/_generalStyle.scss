@@ -56,16 +56,25 @@ img {
 }
 
 button {
-    display: block;
+    display: block; /*Block centering*/
+    margin-right: auto;
+    margin-left: auto; 
     background-color: #eeeae3;
     border: 5px, black;
-    border-radius: 5px;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    padding: 1vh 6vw;
-    text-align: center;
-    text-decoration: none;
+    border-radius: 10px;
     font-size: 16px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 80vw;
+    height: 80px;
+    min-width: 1px;
+
+    a {
+        text-decoration: none;
+        color:#aa9979;
+        display: block;
+        height: 80px;
+        line-height: 80px;
+        font-size: 1.2rem;
+        font-weight: bold;
+
+    }
 }

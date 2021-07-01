@@ -1,19 +1,5 @@
 @import '_generalStyle';
 @import '_variablesMixins.scss';
-
-.headerBGFixed {
-    position: relative;
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, 8)), url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
-    min-height: $parallaxMinHeight;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-}
-
-fade {
-    @include edgeFade($fadeHeight);
-}
-
 @import '_headerStyle.scss';
 
 .ourStoryGridCntnr {
@@ -28,12 +14,6 @@ fade {
         object-fit: cover;
     }
 
-    button {
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%;
-    }
-
     #imgRight {
         display: none;
     }
@@ -41,6 +21,10 @@ fade {
 
 .pizzaChef {
     display: none;
+}
+
+#imgMobileOnly {
+    min-height: 300px;
 }
 
 .sectionHeader {
@@ -67,6 +51,10 @@ fade {
         box-shadow: none;
         height: 40px;
         object-fit: contain;
+    }
+
+    .paraMobileHide {
+        display: none;
     }
 }
 
@@ -205,12 +193,6 @@ fade {
 
 @media only screen and (min-width:700px) {
    
-   .pizzaChef {
-        display: initial;
-        height: 80%;
-        margin: 0;
-    }
-
    .ourStoryGridCntnr {
         grid-template-columns: 1fr 1.5fr 1fr;
         margin: 0 2vw;
@@ -224,9 +206,22 @@ fade {
             display: inherit;
             object-fit: contain;
             box-shadow: none;
+            height: 100%;
+        }
+        .pizzaChef {
+            display: inline-block;
+            height: 100%;
+            margin: 0;
+            width: 90%;
+            padding-bottom: 20px;
+            box-shadow: none;
         }
    }
-  
+
+    button { 
+        width: 250px;
+    }
+
     .iframeContainer {
         width: 70%;
         padding-top: 45%; //Adjust to maintain preferred aspect ratio
@@ -237,7 +232,7 @@ fade {
         height: 25vh;
     }
 
-    .twoColGridContainer {
+    .findUsColContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         justify-content: center;
@@ -261,18 +256,15 @@ fade {
 }
 
 @media only screen and (min-width:1000px) {
-    main {
-        margin: 0 2vw;
+    
+    .headerBGFixed:after {
+        height: $fadeHeight*1.7;
     }
-     
+    
     .headerBGFixed {
         min-height: 100vh;
     }
-     
-    fade {
-        @include edgeFade(100px);
-    } 
- 
+    
     .navigation_grid_container {
         top: 25vh;
  
@@ -280,11 +272,11 @@ fade {
             width: 25%;
         }
     }
- 
+
     .ourStoryGridCntnr{
         margin: 0 15vw;
     }
- 
+    
     // Page load header animations 
     @keyframes title_appear {
         0% {opacity: 0%;}
@@ -311,18 +303,23 @@ fade {
             font-size: 14px;
         }
     }
- 
+    
+    .sectionHeader > .paraMobileHide {
+        display: block;
+    }
+
     .videoBanner { 
-        padding-top: 33%;
+        padding-top: 50%;
     }
     .iframeContainer {
         padding-top: 33%;
     }
+
     .iframeContainer {
-        width: 50%;
+        width: 55%;
         padding-top: 33%; //Adjust to maintain preferred aspect ratio
     }
- 
+    
     //Gallery Grid
     .wrapper {
         margin: 20px 16vw;
@@ -338,6 +335,7 @@ fade {
         grid-template-rows: repeat(5, 200px);
         align-items: center;
         justify-items: center;
+        margin: 0 5vw;
 
         img:nth-child(1) {
             grid-row: 1 / 3;
@@ -390,7 +388,7 @@ fade {
         min-height: $parallaxMinHeight*0.6;
     }
 
-    .twoColGridContainer {
+    .findUsColContainer {
         margin: 20px 16vw;
     }
 

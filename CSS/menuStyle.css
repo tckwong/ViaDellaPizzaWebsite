@@ -55,22 +55,31 @@ img {
 
 button {
   display: block;
-  background-color: #eeeae3;
-  border: 5px, black;
-  border-radius: 5px;
-  color: black;
-  font-weight: bold;
-  padding: 1vh 6vw;
-  text-align: center;
-  text-decoration: none;
-  font-size: 16px;
+  /*Block centering*/
   margin-right: auto;
   margin-left: auto;
+  background-color: #eeeae3;
+  border: 5px, black;
+  border-radius: 10px;
+  font-size: 16px;
+  width: 80vw;
+  height: 80px;
+  min-width: 1px;
+}
+
+button a {
+  text-decoration: none;
+  color: #aa9979;
+  display: block;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .headerBGFixed {
   position: relative;
-  min-height: 300px;
+  min-height: 250px;
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -129,6 +138,24 @@ button {
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.9)), url("https://i.pinimg.com/originals/fc/40/ee/fc40ee0c2f22b29d21c33e64ac11dbf3.jpg");
 }
 
+.headerBGFixed {
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.headerBGFixed:after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(238, 234, 227, 0.8) 100%);
+}
+
 .navWrapper {
   position: absolute;
   top: 2vh;
@@ -171,7 +198,6 @@ button {
 
 .navWrapper .navDropdown label {
   user-select: none;
-  cursor: pointer;
 }
 
 .navWrapper .navDropdown .dropdown-content {
@@ -294,6 +320,9 @@ button {
 }
 
 @media only screen and (min-width: 700px) {
+  .headerBGFixed {
+    min-height: 600px;
+  }
   #mobilePhoneIcon {
     display: none;
   }
