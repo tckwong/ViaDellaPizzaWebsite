@@ -77,6 +77,11 @@ button a {
   font-weight: bold;
 }
 
+button a:hover {
+  color: #af822e;
+}
+
+/* Using background-attachment to create a parallax feel, with a gradiant shade to give better focus on text*/
 .headerBGFixed {
   position: relative;
   background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
@@ -86,6 +91,7 @@ button a {
   background-size: cover;
 }
 
+/*Navigation fade effect placed across the screen at the top */
 .headerBGFixed:before {
   position: absolute;
   content: "";
@@ -95,6 +101,7 @@ button a {
   background-image: linear-gradient(to bottom, rgba(27, 25, 25, 0), rgba(0, 0, 0, 0.8) 100%);
 }
 
+/*White fade effect */
 .headerBGFixed:after {
   position: absolute;
   content: "";
@@ -220,13 +227,17 @@ button a {
   color: white;
 }
 
-.navWrapper #mobilePhoneIcon {
+#mobilePhoneIcon img {
   filter: invert(100);
   height: 38px;
   box-shadow: none;
   justify-self: end;
   margin-top: 8px;
   margin-right: 18px;
+}
+
+#mobilePhoneIcon p {
+  display: none;
 }
 
 .navigation_grid_container {
@@ -268,8 +279,14 @@ button a {
 }
 
 @media only screen and (min-width: 700px) {
-  #mobilePhoneIcon {
+  #mobilePhoneIcon img {
     display: none;
+  }
+  #mobilePhoneIcon p {
+    display: inline-block;
+    color: white;
+    font-size: 1.2rem;
+    line-height: 0px;
   }
   #navContact a {
     pointer-events: none;
@@ -285,17 +302,41 @@ button a {
     display: none;
   }
   .navWrapper #desktopOnlyNav {
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 5fr;
     justify-content: center;
     text-align: center;
-    margin: 2vh 32vw;
+    margin: 2vh 0;
+    margin-left: 35vw;
+    margin-right: 15px;
+    justify-items: end;
   }
   .navWrapper #desktopOnlyNav li {
     display: inline;
   }
   .navWrapper #desktopOnlyNav li a {
     color: #aa9979;
+  }
+  .navWrapper #desktopOnlyNav #phoneCTA:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("https://i.pinimg.com/originals/4d/f3/3c/4df33c23f92dc501d1b2e28d0a642953.jpg");
+    filter: invert(100%);
+  }
+  .navWrapper #desktopOnlyNav #phoneCTA {
+    color: white;
+    justify-self: end;
+    pointer-events: none;
+    cursor: auto;
+  }
+  #mobilePhoneIcon p {
+    display: none;
+  }
+  .navigation_grid_container {
+    top: 130px;
   }
 }
 
@@ -623,6 +664,7 @@ label {
   }
   .footerGridContainer h2 {
     padding: 2vh 0;
+    text-align: left;
   }
   .footerGridContainer li {
     list-style: none;
@@ -646,6 +688,9 @@ label {
 @media only screen and (min-width: 1000px) {
   .footerGridContainer {
     padding-bottom: 5vh;
+  }
+  .footerGridContainer .socialMediaIcons {
+    height: 30px;
   }
 }
 
@@ -673,6 +718,12 @@ label {
     justify-items: center;
     align-items: center;
   }
+  #menuGridTabDesk p {
+    padding-left: 0;
+  }
+  #menuGridTabDesk img {
+    margin-left: 0;
+  }
   #pizzSzePrcs {
     margin-left: auto;
     margin-right: auto;
@@ -681,6 +732,16 @@ label {
     text-align: center;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .menuNavContainer {
+    margin: 0 20vw;
+    margin-bottom: 5vh;
+  }
+  .menuDisplay > div {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=menuStyle.css.map */

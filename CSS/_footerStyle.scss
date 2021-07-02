@@ -48,6 +48,7 @@
 
         h2 {
             padding: 2vh 0;
+            text-align: left;
         }
 
         li {
@@ -57,7 +58,7 @@
 
         div:nth-child(4) {
             grid-column: 1 / span 3;
-            padding:0;
+            padding: 0;
             padding-top: 40px;
             margin: 0;
             justify-self: center;
@@ -75,5 +76,9 @@
 @media only screen and (min-width:1000px) {
     .footerGridContainer {
         padding-bottom: 5vh;
+
+        .socialMediaIcons {
+            height:30px;
+        }
     }
 }

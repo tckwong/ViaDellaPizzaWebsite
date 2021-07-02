@@ -200,6 +200,10 @@
     .headerBGFixed {
         min-height: $parallaxMinHeight*1.2;
     }
+    
+    .navigation_grid_container {
+        top: 150px;
+    }
 
    .ourStoryGridCntnr {
         grid-template-columns: 1fr 1.5fr 1fr;

@@ -1,3 +1,4 @@
+/* Using background-attachment to create a parallax feel, with a gradiant shade to give better focus on text*/
 .headerBGFixed {
     position: relative;
     background-image: linear-gradient(to bottom,rgba(0, 0, 0, .6),rgba(0, 0, 0, 8)), url('https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg');
@@ -6,6 +7,7 @@
     background-position: center;
     background-size: cover;
 }
+/*Navigation fade effect placed across the screen at the top */
 .headerBGFixed:before {
     position: absolute;
     content: "";
@@ -14,7 +16,7 @@
     height: $fadeHeight*1.5;
     background-image: linear-gradient(to bottom, rgba(27, 25, 25, 0), rgba(0, 0, 0, 0.8) 100%); 
 }
-  
+/*White fade effect */
 .headerBGFixed:after {
     position: absolute;
     content: "";
@@ -130,17 +132,21 @@
             }
         }
     }
-    
+}  
     //Phone Icon Styling (Mobile Only)
     #mobilePhoneIcon {
-        filter: invert(100);
-        height: 38px;
-        box-shadow: none;
-        justify-self: end;
-        margin-top: 8px;
-        margin-right: 18px;
+        img{
+            filter: invert(100);
+            height: 38px;
+            box-shadow: none;
+            justify-self: end;
+            margin-top: 8px;
+            margin-right: 18px;
+        }    
 
-    }
+        p {
+            display: none;
+        }
 }
 
 .navigation_grid_container {
@@ -185,13 +191,25 @@
 @media only screen and (min-width:700px) {
     
     #mobilePhoneIcon {
-        display: none;
+
+        img {
+            display: none;
+        }
+
+        p {
+            display: inline-block;
+            color: white;
+            font-size: 1.2rem;
+            line-height: 0px;
+        }
+        
     }
 
     #navContact a {
         pointer-events: none; // Makes the anchor tag unclickable
         cursor: default; //Default cursor type
     }
+
 }
 
 @media only screen and (min-width:1000px) {
@@ -203,12 +221,16 @@
         }
         
         #desktopOnlyNav {
+            position: relative;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: 1fr 1fr 1fr 5fr;
             justify-content: center;
             text-align: center;
-            margin: 2vh 32vw;
-        
+            margin: 2vh 0;
+            margin-left: 35vw;
+            margin-right: 15px;
+            justify-items: end;
+            
             li {
                 display: inline;
                 
@@ -216,6 +238,34 @@
                     color:rgb(170, 153, 121);
                 }
             }
+
+            #phoneCTA:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top:0;
+                background-image: url('https://i.pinimg.com/originals/4d/f3/3c/4df33c23f92dc501d1b2e28d0a642953.jpg');
+                filter: invert(100%);
+            }
+
+            #phoneCTA {
+                color: white;
+                justify-self: end;
+                pointer-events: none;
+                cursor: auto;
+            }
         }
     }
+
+    #mobilePhoneIcon {
+        p {
+            display: none;
+        }
+        
+    }
+
+    .navigation_grid_container {
+        top: 130px;
+    }
+
 }
