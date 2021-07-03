@@ -120,7 +120,7 @@ button a:hover {
 /* Using background-attachment to create a parallax feel, with a gradiant shade to give better focus on text*/
 .headerBGFixed {
   position: relative;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/5e/a3/4f/5ea34f5f3f17b677c7c1bd4475397d05.jpg");
   min-height: 500px;
   background-attachment: fixed;
   background-position: center;
@@ -563,6 +563,85 @@ button a:hover {
 
 #MobileHiddenPara {
   display: none;
+}
+
+.footerGridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), black), url("https://i.pinimg.com/originals/59/ed/b4/59edb4fc80e730ffb402c1d4df58a1bb.jpg");
+  background-size: cover;
+  justify-items: start;
+}
+
+.footerGridContainer div {
+  color: white;
+  margin-left: 10vw;
+}
+
+.footerGridContainer h2 {
+  padding: 2vh 0;
+}
+
+.footerGridContainer li {
+  list-style: none;
+  padding: 5px 0;
+}
+
+.footerGridContainer a {
+  text-decoration: none;
+  color: white;
+}
+
+.footerGridContainer .socialMediaIcons {
+  height: 18px;
+  justify-self: left;
+  padding: 2px;
+  box-shadow: none;
+  margin: 10px;
+  filter: invert(100%);
+}
+
+@media only screen and (min-width: 700px) {
+  .footerGridContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-size: cover;
+    justify-items: left;
+  }
+  .footerGridContainer div {
+    color: white;
+    padding: 0;
+  }
+  .footerGridContainer h2 {
+    padding: 2vh 0;
+    text-align: left;
+  }
+  .footerGridContainer li {
+    list-style: none;
+    padding: 5px 0;
+  }
+  .footerGridContainer div:nth-child(4) {
+    grid-column: 1 / span 3;
+    padding: 0;
+    padding-top: 40px;
+    margin: 0;
+    justify-self: center;
+  }
+  .footerGridContainer div:nth-child(4):before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 2px solid white;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .footerGridContainer {
+    padding-bottom: 5vh;
+  }
+  .footerGridContainer .socialMediaIcons {
+    height: 30px;
+  }
 }
 
 @media only screen and (min-width: 700px) {
