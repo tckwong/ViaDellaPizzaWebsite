@@ -54,29 +54,69 @@ img {
     box-shadow: 3px 4px 6px #1d1c1c;
 }
 
+/*Custom button styling with animation */
 button {
-    display: block; /*Block centering*/
+    display: block; /*Block centering - margin set to auto*/
     margin-right: auto;
-    margin-left: auto; 
+    margin-left: auto;
+    margin-top: 10px;
     background-color: #eeeae3;
-    border: 5px, black;
     border-radius: 10px;
     font-size: 16px;
     width: 80vw;
-    height: 80px;
+    height: 60px;
     min-width: 1px;
+    border: none;
 
     a {
         text-decoration: none;
         color:#aa9979;
         display: block;
         height: 80px;
-        line-height: 80px;
+        line-height: 60px;
         font-size: 1.2rem;
         font-weight: bold;
     }
 
     a:hover {
-        color:#af822e;
+        color:#b17e1f;
     }
 }
+
+.layer1 {
+    position: relative;
+    transition: all 0.3s ease; /*specifies all properties to transition */
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), /*Sets the shadow */
+    5px 5px 5px 0px rgba(0,0,0,.3);
+}
+
+/*Starting point of animation */
+.layer1:hover:after { 
+    left: auto;
+    right: 0;
+    width: 100%;
+}
+
+/*Nice push effect when activated */
+.layer1:active {
+    top: 2px;
+}
+
+/*This creates the moving shadow effect. */
+.layer2:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    direction: rtl;
+    z-index: -1; //Shadow stays behind text, and does not interfere with cursor
+    box-shadow:
+     -7px -7px 20px 0px #fff9,
+     -4px -4px 5px 0px #fff9,
+     7px 7px 20px 0px #0002,
+     4px 4px 5px 0px #0001;
+    transition: all 0.3s ease;
+}
+

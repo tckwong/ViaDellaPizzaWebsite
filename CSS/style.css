@@ -53,18 +53,20 @@ img {
   box-shadow: 3px 4px 6px #1d1c1c;
 }
 
+/*Custom button styling with animation */
 button {
   display: block;
-  /*Block centering*/
+  /*Block centering - margin set to auto*/
   margin-right: auto;
   margin-left: auto;
+  margin-top: 10px;
   background-color: #eeeae3;
-  border: 5px, black;
   border-radius: 10px;
   font-size: 16px;
   width: 80vw;
-  height: 80px;
+  height: 60px;
   min-width: 1px;
+  border: none;
 }
 
 button a {
@@ -72,13 +74,46 @@ button a {
   color: #aa9979;
   display: block;
   height: 80px;
-  line-height: 80px;
+  line-height: 60px;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
 button a:hover {
-  color: #af822e;
+  color: #b17e1f;
+}
+
+.layer1 {
+  position: relative;
+  transition: all 0.3s ease;
+  /*specifies all properties to transition */
+  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+/*Starting point of animation */
+.layer1:hover:after {
+  left: auto;
+  right: 0;
+  width: 100%;
+}
+
+/*Nice push effect when activated */
+.layer1:active {
+  top: 2px;
+}
+
+/*This creates the moving shadow effect. */
+.layer2:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  direction: rtl;
+  z-index: -1;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  transition: all 0.3s ease;
 }
 
 /* Using background-attachment to create a parallax feel, with a gradiant shade to give better focus on text*/
@@ -286,7 +321,13 @@ button a:hover {
     display: inline-block;
     color: white;
     font-size: 1.2rem;
-    line-height: 0px;
+  }
+  #mobilePhoneIcon #inlinePhoneIcon {
+    display: inline-block;
+    height: 18px;
+    filter: invert(100%);
+    margin: 0;
+    padding: 0;
   }
   #navContact a {
     pointer-events: none;
@@ -318,19 +359,22 @@ button a:hover {
   .navWrapper #desktopOnlyNav li a {
     color: #aa9979;
   }
-  .navWrapper #desktopOnlyNav #phoneCTA:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    background-image: url("https://i.pinimg.com/originals/4d/f3/3c/4df33c23f92dc501d1b2e28d0a642953.jpg");
-    filter: invert(100%);
+  .navWrapper #desktopOnlyNav li a:hover {
+    color: #ececec;
   }
   .navWrapper #desktopOnlyNav #phoneCTA {
     color: white;
     justify-self: end;
     pointer-events: none;
     cursor: auto;
+  }
+  .navWrapper #desktopOnlyNav #inlinePhoneIcon {
+    display: inline-block;
+    height: 18px;
+    filter: invert(100%);
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
   }
   #mobilePhoneIcon p {
     display: none;
@@ -403,7 +447,7 @@ button a:hover {
 .videoBanner {
   position: relative;
   background-image: url("https://i.pinimg.com/originals/21/2f/91/212f91a5e064ea3087cce922f4acd32a.jpg");
-  padding-top: 66%;
+  padding-top: 80%;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
@@ -413,7 +457,7 @@ button a:hover {
 .iframeContainer {
   position: absolute;
   width: 90%;
-  padding-top: 50%;
+  padding-top: 66%;
   margin: 0 auto;
   top: 50%;
   left: 50%;
@@ -698,7 +742,7 @@ button a:hover {
   }
   #interactiveMap {
     max-width: 100%;
-    height: 30vh;
+    height: 300px;
   }
 }
 

@@ -65,7 +65,7 @@
 .videoBanner {
     position: relative;
     background-image: url('https://i.pinimg.com/originals/21/2f/91/212f91a5e064ea3087cce922f4acd32a.jpg');
-    padding-top: 66%;
+    padding-top: 80%;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -76,7 +76,7 @@
 .iframeContainer {
     position: absolute;
     width: 90%;
-    padding-top: 50%; //Adjust to maintain preferred aspect ratio
+    padding-top: 66%; //Adjust to maintain preferred aspect ratio
     margin: 0 auto;
     top: 50%;
     left: 50%;
@@ -263,7 +263,7 @@
 
     #interactiveMap {
         max-width: 100%;
-        height: 30vh;
+        height: 300px;
     }
 }
 

@@ -200,9 +200,15 @@
             display: inline-block;
             color: white;
             font-size: 1.2rem;
-            line-height: 0px;
         }
-        
+
+        #inlinePhoneIcon {
+            display: inline-block;
+            height: 18px;
+            filter: invert(100%);
+            margin:0;
+            padding:0;
+        }
     }
 
     #navContact a {
@@ -237,15 +243,10 @@
                 a {
                     color:rgb(170, 153, 121);
                 }
-            }
 
-            #phoneCTA:before {
-                content: "";
-                position: absolute;
-                left: 0;
-                top:0;
-                background-image: url('https://i.pinimg.com/originals/4d/f3/3c/4df33c23f92dc501d1b2e28d0a642953.jpg');
-                filter: invert(100%);
+                a:hover {
+                    color:rgb(236, 236, 236);
+                }
             }
 
             #phoneCTA {
@@ -254,6 +255,16 @@
                 pointer-events: none;
                 cursor: auto;
             }
+            
+            #inlinePhoneIcon {
+                display: inline-block;
+                height: 18px;
+                filter: invert(100%);
+                margin:0;
+                padding:0;
+                box-shadow: none;
+            }
+
         }
     }
 
