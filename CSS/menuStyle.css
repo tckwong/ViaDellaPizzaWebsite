@@ -393,6 +393,11 @@ button a:hover {
   #mobilePhoneIcon p {
     display: none;
   }
+  #pageTitle > #phoneShade {
+    margin-top: 50px;
+    margin-left: 40vw;
+    margin-right: 40vw;
+  }
 }
 
 .headerBGFixed {

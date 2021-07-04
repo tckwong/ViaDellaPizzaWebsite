@@ -393,6 +393,11 @@ button a:hover {
   #mobilePhoneIcon p {
     display: none;
   }
+  #pageTitle > #phoneShade {
+    margin-top: 50px;
+    margin-left: 40vw;
+    margin-right: 40vw;
+  }
 }
 
 .ourStoryGridCntnr {
@@ -613,6 +618,7 @@ button a:hover {
   display: inline-block;
   margin: 0 auto;
   width: 100%;
+  height: 40vw;
 }
 
 .footerGridContainer {
