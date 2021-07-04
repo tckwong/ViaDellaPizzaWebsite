@@ -305,6 +305,7 @@ button a:hover {
 .navigation_grid_container #pageTitle > p {
   font-size: 1.2rem;
   text-align: center;
+  margin-top: 5px;
 }
 
 .navigation_grid_container #logo {
@@ -312,6 +313,19 @@ button a:hover {
   margin: 0;
   box-shadow: initial;
   justify-self: center;
+}
+
+#mobilePhoneNum {
+  height: 18px;
+  padding: 0;
+  margin: 0;
+  filter: invert(100);
+  box-shadow: none;
+  top: 0;
+}
+
+#phoneShade {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 @media only screen and (min-width: 700px) {
@@ -379,9 +393,6 @@ button a:hover {
   }
   #mobilePhoneIcon p {
     display: none;
-  }
-  .navigation_grid_container {
-    top: 130px;
   }
 }
 
@@ -453,8 +464,7 @@ button a:hover {
 }
 
 .headerBGFixed {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://i.pinimg.com/originals/9b/da/26/9bda264b352644ee8b453fa977a7be87.jpg");
-  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/9b/da/26/9bda264b352644ee8b453fa977a7be87.jpg");
   background-position: top;
 }
 

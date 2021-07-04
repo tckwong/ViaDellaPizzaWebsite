@@ -3,7 +3,7 @@
 @import '_headerStyle.scss';
 
 .ourStoryGridCntnr {
-    display: grid; //Foundation for tablet and desktop version
+    display: grid;
     grid-template-columns: 1fr;
     margin-top: 20px;
     justify-items: center;
@@ -94,7 +94,7 @@
     border-radius: 20px;
 }
 
-// Page load animations
+// Page load animations for header title
 @keyframes title_appear {
     0% {opacity: 0%;}
     100% {opacity: 100%;}
@@ -121,6 +121,7 @@
     background: linear-gradient(90deg, #3F2B96 0%, #A8C0FF 100%);
 }
 
+//white fade effect using linear-gradient effects. This code sets the base for both fade
 .sideFade::before, .sideFade::after {
     position: absolute;
     height: 100%;
@@ -134,10 +135,11 @@
     left: 0;
     top: 0;
 }
+
   .sideFade::after {
     right:0;
     top:0;
-    transform: rotateZ(180deg);
+    transform: rotateZ(180deg); //Rotate fade for the right fade
 }
 
 .itemSlide {
@@ -148,13 +150,13 @@
     overflow-x: scroll;
 }
 
-.itemSlide::-webkit-scrollbar { /*Hide scrollbar for Chrome */
+.itemSlide::-webkit-scrollbar { //Hide scrollbar for Chrome/ Firefox
     display: none;
 }
 
 .itemSlide {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  // IE and Edge scrollbar 
+    scrollbar-width: none;  // Firefox scrollbar
 }
 
 .itemSlide img {
@@ -310,7 +312,7 @@
     
     .navigation_grid_container {
         #logo {
-            height: 200px;
+            height: 150px;
         }
     }
     
@@ -371,7 +373,7 @@
         }
 
         img:nth-child(2) {
-            height: 95%;
+            height: 100%;
             align-self: start;
         }
 
