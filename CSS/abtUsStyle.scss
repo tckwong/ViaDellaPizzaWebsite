@@ -5,8 +5,7 @@
 @import '_subPageStyle.scss';
 
 .headerBGFixed {
-    background-image: linear-gradient(rgba(0, 0, 0, .6),rgba(0, 0, 0, .5)), url('https://i.pinimg.com/originals/9b/da/26/9bda264b352644ee8b453fa977a7be87.jpg');
-    background-position: top;
+    background-image: linear-gradient(rgba(0, 0, 0, .8),rgba(0, 0, 0, .5)), url('https://i.pinimg.com/originals/35/e9/9c/35e99cb178ffee67ab869c3fcb4cb873.jpg');
 }
 
 .navigation_grid_container #pageTitle > h1:after {
@@ -173,6 +172,10 @@
 }  
    
 @media only screen and (min-width:1000px) {
+    .navigation_grid_container {
+        top: 130px;
+    }
+
     main {
         margin: 0 20vw;
     }

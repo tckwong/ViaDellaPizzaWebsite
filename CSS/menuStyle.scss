@@ -256,10 +256,14 @@ label {
 }
 
 @media only screen and (min-width:1000px) {
+
+    .navigation_grid_container { 
+        top: 130px; /*Using px unit to keep title stationary during variable window sizes*/ 
+    }
+
     .menuNavContainer {
         margin: 0 20vw;
         margin-bottom: 5vh;
-
     }
 
     .menuDisplay > div {

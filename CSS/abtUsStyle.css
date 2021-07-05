@@ -87,7 +87,7 @@ button a:hover {
 .layer1 {
   position: relative;
   transition: all 0.3s ease;
-  /*specifies all properties to transition */
+  /*specifies all properties to transition. Box shadow specifically */
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -277,6 +277,7 @@ button a:hover {
 .navigation_grid_container {
   position: absolute;
   top: 100px;
+  /*Using px unit to keep title stationary during variable window sizes*/
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
@@ -358,13 +359,11 @@ button a:hover {
   .navWrapper #desktopOnlyNav {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     text-align: center;
-    margin: 2vh 0;
-    margin-left: 35vw;
-    margin-right: 15px;
-    justify-items: end;
+    margin: 2vh 34vw;
+    justify-items: center;
   }
   .navWrapper #desktopOnlyNav li {
     display: inline;
@@ -476,8 +475,7 @@ button a:hover {
 }
 
 .headerBGFixed {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/9b/da/26/9bda264b352644ee8b453fa977a7be87.jpg");
-  background-position: top;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://i.pinimg.com/originals/35/e9/9c/35e99cb178ffee67ab869c3fcb4cb873.jpg");
 }
 
 .navigation_grid_container #pageTitle > h1:after {
@@ -601,7 +599,8 @@ button a:hover {
 }
 
 .footerGridContainer h2 {
-  padding: 2vh 0;
+  text-align: left;
+  margin-left: 0;
 }
 
 .footerGridContainer li {
@@ -708,6 +707,9 @@ button a:hover {
 }
 
 @media only screen and (min-width: 1000px) {
+  .navigation_grid_container {
+    top: 130px;
+  }
   main {
     margin: 0 20vw;
   }

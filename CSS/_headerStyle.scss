@@ -7,6 +7,7 @@
     background-position: center;
     background-size: cover;
 }
+
 /*Navigation fade effect placed across the screen at the top */
 .headerBGFixed:before {
     position: absolute;
@@ -66,7 +67,7 @@
         }
 
         label {
-            user-select: none; //allows label to be toggled
+            user-select: none; //allows label to be selected
         }
 
         .dropdown-content {
@@ -152,7 +153,7 @@
 
 .navigation_grid_container {
     position: absolute;
-    top: 100px;
+    top: 100px; /*Using px unit to keep title stationary during variable window sizes*/ 
     display: grid;
     width: 100%;
     grid-template-columns: 1fr;
@@ -244,13 +245,11 @@
         #desktopOnlyNav {
             position: relative;
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 5fr;
+            grid-template-columns: 1fr 1fr 1fr;
             justify-content: center;
             text-align: center;
-            margin: 2vh 0;
-            margin-left: 35vw;
-            margin-right: 15px;
-            justify-items: end;
+            margin: 2vh 34vw;
+            justify-items: center;
             
             li {
                 display: inline;

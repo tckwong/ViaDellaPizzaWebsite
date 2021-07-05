@@ -86,7 +86,7 @@ button a:hover {
 .layer1 {
   position: relative;
   transition: all 0.3s ease;
-  /*specifies all properties to transition */
+  /*specifies all properties to transition. Box shadow specifically */
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -276,6 +276,7 @@ button a:hover {
 .navigation_grid_container {
   position: absolute;
   top: 100px;
+  /*Using px unit to keep title stationary during variable window sizes*/
   display: grid;
   width: 100%;
   grid-template-columns: 1fr;
@@ -357,13 +358,11 @@ button a:hover {
   .navWrapper #desktopOnlyNav {
     position: relative;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 5fr;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     text-align: center;
-    margin: 2vh 0;
-    margin-left: 35vw;
-    margin-right: 15px;
-    justify-items: end;
+    margin: 2vh 34vw;
+    justify-items: center;
   }
   .navWrapper #desktopOnlyNav li {
     display: inline;
@@ -696,7 +695,8 @@ label {
 }
 
 .footerGridContainer h2 {
-  padding: 2vh 0;
+  text-align: left;
+  margin-left: 0;
 }
 
 .footerGridContainer li {
@@ -803,6 +803,10 @@ label {
 }
 
 @media only screen and (min-width: 1000px) {
+  .navigation_grid_container {
+    top: 130px;
+    /*Using px unit to keep title stationary during variable window sizes*/
+  }
   .menuNavContainer {
     margin: 0 20vw;
     margin-bottom: 5vh;
