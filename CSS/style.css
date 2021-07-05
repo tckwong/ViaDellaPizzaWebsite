@@ -80,7 +80,7 @@ button a {
 }
 
 button a:hover {
-  color: #b17e1f;
+  color: #7a5e2a;
 }
 
 .layer1 {
@@ -90,7 +90,6 @@ button a:hover {
   box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5), 5px 5px 5px 0px rgba(0, 0, 0, 0.3);
 }
 
-/*Starting point of animation */
 .layer1:hover:after {
   left: auto;
   right: 0;
@@ -110,9 +109,8 @@ button a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  direction: rtl;
   z-index: -1;
-  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002, 4px 4px 5px 0px #0001;
+  box-shadow: -7px -7px 20px 0px #fff9, -4px -4px 5px 0px #fff9, 7px 7px 20px 0px #0002;
   transition: all 0.3s ease;
 }
 
