@@ -45,5 +45,19 @@
     #phoneShade {
         display: none;
     }
+
+    .navWrapper {
+        display: inline;
+    
+        #desktopOnlyNav {
+            
+            grid-template-columns: 1fr 1fr 1fr 2.6fr;
+            text-align: center;
+            margin: 2vh 0;
+            margin-left: 35vw;
+            margin-right: 21vw;
+            justify-items: right;
+        }
+    }
     
 }

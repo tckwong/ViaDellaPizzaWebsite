@@ -148,7 +148,7 @@ button a:hover {
   position: absolute;
   top: 2vh;
   display: grid;
-  grid-template-columns: .1fr 1fr;
+  grid-template-columns: .1fr 1fr .1fr;
   width: 100%;
   align-content: center;
   justify-items: end;
@@ -260,6 +260,14 @@ button a:hover {
   color: white;
 }
 
+.navWrapper #phoneNumNav {
+  align-self: center;
+}
+
+.navWrapper #phoneNumNav a {
+  color: white;
+}
+
 #mobilePhoneIcon img {
   filter: invert(100);
   height: 38px;
@@ -313,6 +321,10 @@ button a:hover {
   justify-self: center;
 }
 
+.navigation_grid_container #phoneShade {
+  display: none;
+}
+
 #mobilePhoneNum {
   height: 18px;
   padding: 0;
@@ -322,11 +334,13 @@ button a:hover {
   top: 0;
 }
 
-#phoneShade {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
 @media only screen and (min-width: 700px) {
+  .navWrapper {
+    grid-template-columns: .1fr 1fr;
+  }
+  .navWrapper #phoneNumNav {
+    display: none;
+  }
   #mobilePhoneIcon img {
     display: none;
   }
@@ -345,6 +359,13 @@ button a:hover {
   #navContact a {
     pointer-events: none;
     cursor: default;
+  }
+  #pageTitle > #phoneShade {
+    display: block;
+    margin-top: 3.5vw;
+    margin-left: 40vw;
+    margin-right: 40vw;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -389,11 +410,6 @@ button a:hover {
   }
   #mobilePhoneIcon p {
     display: none;
-  }
-  #pageTitle > #phoneShade {
-    margin-top: 50px;
-    margin-left: 40vw;
-    margin-right: 40vw;
   }
 }
 
@@ -470,6 +486,17 @@ button a:hover {
   }
   #phoneShade {
     display: none;
+  }
+  .navWrapper {
+    display: inline;
+  }
+  .navWrapper #desktopOnlyNav {
+    grid-template-columns: 1fr 1fr 1fr 2.6fr;
+    text-align: center;
+    margin: 2vh 0;
+    margin-left: 35vw;
+    margin-right: 21vw;
+    justify-items: right;
   }
 }
 
