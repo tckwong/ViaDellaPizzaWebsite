@@ -271,7 +271,7 @@
 }
 
 @media only screen and (min-width:1000px) {
-    
+    //Header code cannot be placed in header partial file
     .headerBGFixed:after {
         height: $fadeHeight*1.7;
     }
@@ -287,13 +287,8 @@
             width: 25%;
         }
     }
-
-    .ourStoryGridCntnr{
-        margin: 0 15vw;
-    }
-    
-    // Page load header animations 
-    @keyframes title_appear {
+     // Page load header animations 
+     @keyframes title_appear {
         0% {opacity: 0%;}
         100% {opacity: 100%;}
     }
@@ -316,9 +311,10 @@
             height: 150px;
         }
     }
-    
+    //Our story section - Home Page
     .ourStoryGridCntnr {
         margin-top: 20px;
+        margin: 0 15vw;
          
         p {
             font-size: 14px;

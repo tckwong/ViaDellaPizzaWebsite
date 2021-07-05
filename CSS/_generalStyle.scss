@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; // Used to get rid of extra unwanted margins
 }
 
 body {
@@ -86,7 +86,7 @@ button {
 .layer1 {
     position: relative;
     transition: all 0.3s ease; /*specifies all properties to transition */
-    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), /*Sets the shadow */
+    box-shadow: inset 2px 2px 2px 0px rgba(255,255,255,.5), /*Sets the shadow, multi layer */
     5px 5px 5px 0px rgba(0,0,0,.3);
 }
 
@@ -97,7 +97,7 @@ button {
     width: 100%;
 }
 
-/*Nice push effect when activated */
+/*Active push effect when clicked */
 .layer1:active {
     top: 2px;
 }

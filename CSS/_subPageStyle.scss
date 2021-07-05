@@ -12,7 +12,6 @@
     }
 }
 
-
 //Page load title animation
 @keyframes title_appear {
     0% {opacity: 0%;}
@@ -32,8 +31,19 @@
     @include pageLoadAppearP ($fontSze*.5);
 }
 
+@media only screen and (min-width:700px) {
+
+    #phoneShade {
+        display: none;
+    }
+}
+
 @media only screen and (min-width:1000px) {
     .headerBGFixed {
         min-height: $parallaxMinHeight*0.8;
     }
+    #phoneShade {
+        display: none;
+    }
+    
 }
